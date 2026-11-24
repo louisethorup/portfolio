@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Louise Lynge Thorup – UI/UX Designer</title>
+<meta name="description" content="Portfolio of Louise Lynge Thorup, UI/UX designer in Copenhagen. Selected UX projects, visual design, service design and motion.">
+<meta property="og:title" content="Louise Lynge Thorup – UI/UX Designer">
+<meta property="og:description" content="Selected UI/UX, visual, service and motion projects.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&amp;family=Inter:wght@400;500;600&amp;family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:inherit;text-decoration:none}a:hover{opacity:0.7}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:left}
+@keyframes frIn{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+.fr-row{animation:frIn 0.9s cubic-bezier(.2,.7,.2,1) both}
+@supports (animation-timeline: view()){.fr-row{animation-timeline:view();animation-range:entry 0% cover 28%}}
+@keyframes frKB{from{transform:scale(1.03) translate(0,0)}to{transform:scale(1.16) translate(-3%,-2%)}}
+.fr-media img.fr-kb{animation:frKB 18s ease-in-out infinite alternate}
+@keyframes pfScroll{0%,10%{object-position:50% 0%}90%,100%{object-position:50% 100%}}
+
+@media (max-width: 1100px){
+.m-head,.m-sec,.m-hero{padding-left:28px!important;padding-right:28px!important}
+.m-pnav,.m-fig{padding-left:28px!important;padding-right:28px!important}
+.m-fr{padding-left:40px!important;padding-right:40px!important}
+.m-visgrid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media (max-width: 760px){
+html,body{overflow-x:hidden}
+.m-root{min-height:100vh!important}
+.m-head{padding:0 20px!important;height:60px!important;font-size:15px!important;gap:12px}
+.m-head>button{white-space:nowrap}
+.m-nav{gap:16px!important}
+.m-hero{padding:48px 20px 72px!important;gap:20px!important}
+.m-hero>p:first-child{font-size:20px!important}
+.m-lead{font-size:26px!important;line-height:1.35!important}
+.m-hero img{width:150px!important;height:150px!important}
+.m-sec{padding:0 20px 88px!important}
+.m-sec>p:first-child{font-size:14px!important;margin-bottom:24px!important}
+.m-uxgrid{grid-template-columns:1fr!important;gap:44px!important}
+.m-uxgrid span[style*="font-size: 25px"]{font-size:21px!important;margin-top:10px!important}
+.m-uxgrid span[style*="font-size: 17.5px"]{font-size:16px!important}
+.m-visgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:28px 14px!important}
+.m-visgrid span[style*="font-size: 17px"]{font-size:15px!important}
+.m-visgrid span[style*="font-size: 14px"]{font-size:13px!important}
+#about>p:first-child{font-size:25px!important}
+#about>p:nth-child(2){font-size:17px!important;margin-bottom:32px!important}
+.m-things{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:4px!important}
+.m-statement{font-size:21px!important;margin-top:48px!important}
+.m-cv{grid-template-columns:1fr!important;gap:48px!important}
+.m-cv span[style*="font-size: 20px"]{font-size:17px!important}
+.m-cv span[style*="font-size: 17.5px"]{font-size:14.5px!important}
+#contact>p:first-child{font-size:25px!important}
+#contact a,#contact span[style*="font-size: 20px"]{font-size:18px!important}
+.m-pnav{padding:12px 20px 0!important;font-size:14px!important}
+.m-pnav>div{gap:10px!important}
+.m-fig{padding:28px 20px 0!important}
+.m-fig h1{font-size:28px!important}
+.m-fig h1+p{font-size:17px!important}
+.m-meta{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px 14px!important}
+.m-panel{margin-top:32px!important}
+.m-panel[style*="padding: 7% 9%"]{padding:6% 5%!important}
+.m-row2{grid-template-columns:1fr!important;gap:22px!important;margin-top:48px!important}
+.m-row2>div{order:0!important}
+.m-row2>div:first-child{order:1!important}
+.m-row2>.m-mediacol{order:2!important;flex-direction:column!important}
+.m-mediacol>div{width:100%!important;flex:none!important}
+.m-photorow{flex-direction:column!important}
+.m-photorow>div{width:100%!important;flex:none!important}
+.m-cards{grid-template-columns:1fr!important}
+.m-cards>div{padding:22px!important}
+.m-pn{grid-template-columns:1fr!important;margin-top:64px!important}
+.m-pn button{justify-content:flex-start!important;text-align:left!important}
+.m-pn button>span:last-child{order:-1}
+.m-fig>div[style*="max-width: 620px"]{margin-top:48px!important}
+.m-fig div[style*="margin-top: 72px"]{margin-top:48px!important}
+.m-fig div[role="tablist"]{padding:0 16px 8px!important;gap:8px!important}
+.m-fr{padding:32px 20px 0!important}
+.m-fr h1{font-size:32px!important}
+.m-fr h1+p{font-size:21px!important}
+.m-fr h1+p+p{font-size:17px!important;margin-top:24px!important}
+.m-frrow{flex-direction:column!important;gap:24px!important;margin-top:48px!important;align-items:stretch!important}
+.m-fritem{flex:none!important;width:100%!important;max-width:100%!important}
+.m-frtext{padding-left:0!important;align-items:flex-start!important;gap:20px!important}
+.m-frtext h3{font-size:19px!important}
+.m-frtext p{font-size:16px!important}
+.m-fr .fr-media>p{font-size:17px!important;line-height:1.35!important;width:80%!important}
+.m-fr .fr-media:has(>p){aspect-ratio:4/3!important}
+.m-hsteps{flex-direction:column!important;gap:20px!important}
+.m-hsteps>div{flex:none!important;width:100%!important}
+.fr-row{animation:none!important}
+}
+</style>
+
+</head>
+<body>
+<div id="app"></div>
+<template id="tpl">
+
+<div class="m-root" style="width: 100%; min-height: 100vh; box-sizing: border-box; background: #ffffff; font-family: Manrope, sans-serif; color: #1c2430">
+  <header style="position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,0.94); backdrop-filter: blur(8px)">
+    <div class="m-head" style="max-width: 1240px; margin: 0 auto; padding: 0 40px; height: 72px; display: flex; justify-content: space-between; align-items: center; font-size: 18px">
+      <button onClick="{{ goIndex }}" style="font-weight: 500; min-height: 44px">Louise Lynge Thorup</button>
+      <nav class="m-nav" style="display: flex; gap: 36px"><button onClick="{{ goProjects }}" style="min-height: 44px">Projects</button><button onClick="{{ goAboutSec }}" style="min-height: 44px">About</button><button onClick="{{ goContact }}" style="min-height: 44px">Contact</button></nav>
+    </div>
+  </header>
+
+  <sc-if value="{{ landing }}" hint-placeholder-val="{{ true }}">
+  <main>
+    <section class="m-hero" style="max-width: 1240px; margin: 0 auto; padding: 100px 40px 120px; display: flex; flex-direction: column; align-items: center; gap: 30px; text-align: center">
+      <p style="margin: 0; font-size: 25px">Hi I’m Louise</p>
+      <p class="m-lead" style="margin: 0; font-family: Roboto, sans-serif; font-weight: 300; font-size: 40px; line-height: 1.35; max-width: 820px">UI/UX Designer. Recent graduate of the IT University of Copenhagen. I create aesthetics that support usability.</p>
+      <img src="assets/436dc68b55f0664f353b212448309271.jpg" alt="Portrait of Louise" style="width: 175px; height: 175px; border-radius: 20px; object-fit: cover; margin-top: 10px">
+    </section>
+
+    <section id="projects" class="m-sec" style="max-width: 1240px; margin: 0 auto; padding: 0 40px 140px">
+      <p style="margin: 0 0 40px; font-size: 17.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #4a5568">Selected UI/UX projects</p>
+      <div class="m-uxgrid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 60px">
+        <sc-for list="{{ ux }}" as="p" hint-placeholder-count="3">
+          <button onClick="{{ p.open }}" onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" onFocus="{{ p.enter }}" onBlur="{{ p.leave }}" style="display: flex; flex-direction: column; gap: 6px; text-align: left">
+            <div style="{{ p.panelStyle }}"><img src="{{ p.cover }}" alt="{{ p.title }}" style="{{ p.coverStyle }}"><span style="{{ p.pillStyle }}">Read case →</span></div>
+            <span style="font-size: 25px; font-weight: 500; margin-top: 16px">{{ p.short }}</span>
+            <span style="font-size: 17.5px; line-height: 1.55; color: #4a5568">{{ p.blurb }}</span>
+          </button>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="visual" class="m-sec" style="max-width: 1240px; margin: 0 auto; padding: 0 40px 140px; box-sizing: border-box">
+      <p style="margin: 0 0 40px; font-size: 17.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #4a5568">Visual, service &amp; motion</p>
+      <div class="m-visgrid" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px">
+        <sc-for list="{{ vis }}" as="p" hint-placeholder-count="5">
+          <button onClick="{{ p.open }}" onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" onFocus="{{ p.enter }}" onBlur="{{ p.leave }}" style="display: flex; flex-direction: column; gap: 12px; text-align: left; min-width: 0">
+            <div style="{{ p.cardBox }}"><sc-if value="{{ p.noVid }}" hint-placeholder-val="{{ true }}"><img src="{{ p.homeImg }}" alt="{{ p.title }}" style="{{ p.cardImg }}"></sc-if><sc-if value="{{ p.hasVid }}" hint-placeholder-val="{{ false }}"><video src="{{ p.homeVid }}" poster="{{ p.homeImg }}" autoplay="" muted="" loop="" playsinline="" aria-label="{{ p.title }}" style="{{ p.cardImg }}"></video></sc-if><span style="{{ p.arrowStyle }}" aria-hidden="true"><svg viewBox="0 0 22 22" width="13" height="13"><path d="M 20.707 1.293 C 21.098 1.683 21.098 2.317 20.707 2.707 L 2.707 20.707 C 2.317 21.098 1.683 21.098 1.293 20.707 C 0.902 20.317 0.902 19.683 1.293 19.293 L 19.293 1.293 C 19.683 0.902 20.317 0.902 20.707 1.293 Z" fill="#000000"></path><path d="M 7 2 C 7 1.448 7.448 1 8 1 L 20 1 C 20.552 1 21 1.448 21 2 L 21 14 C 21 14.552 20.552 15 20 15 C 19.448 15 19 14.552 19 14 L 19 3 L 8 3 C 7.448 3 7 2.552 7 2 Z" fill="#000000"></path></svg></span></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 17px; font-weight: 500; line-height: 1.35; color: #1c2430">{{ p.title }} <span style="{{ p.arrowNudge }}">↗</span></span><span style="font-size: 14px; line-height: 1.45; color: #4a5568">{{ p.tagsSlash }}</span></div>
+          </button>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="about" class="m-sec" style="max-width: 1240px; margin: 0 auto; padding: 0 40px 120px; display: flex; flex-direction: column; align-items: center; text-align: center">
+      <p style="margin: 0; font-size: 30px; font-weight: 500">A Little Background</p>
+      <p style="margin: 6px 0 56px; font-size: 20px; color: #4a5568">Get to know me</p>
+      <div class="m-things" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; width: 100%">
+        <sc-for list="{{ things }}" as="t" hint-placeholder-count="14">
+          <div tabIndex="0" onMouseEnter="{{ t.enter }}" onMouseLeave="{{ t.leave }}" onFocus="{{ t.enter }}" onBlur="{{ t.leave }}" style="position: relative; aspect-ratio: 1; background: #f2f2f2; overflow: hidden"><img src="{{ t.img }}" alt="{{ t.alt }}" style="{{ t.imgStyle }}"><div style="{{ t.textStyle }}">{{ t.text }}</div></div>
+        </sc-for>
+      </div>
+      <div class="m-statement" style="max-width: 940px; margin-top: 80px; font-weight: 300; font-size: 30px; line-height: 1.5">
+        <p style="margin: 0">I have a <span style="color: #4a5568; font-weight: 400">strong visual foundation</span> from my bachelor’s in Communication Design at Design School Kolding,</p>
+        <p style="margin: 1.5em 0 0">and <span style="color: #4a5568; font-weight: 400">technical depth</span> from my master’s in Digital Design and Interactive Technologies at the IT University of Copenhagen.</p>
+      </div>
+    </section>
+
+    <section class="m-sec m-cv" style="max-width: 1240px; margin: 0 auto; padding: 0 40px 120px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 80px">
+      <div><p style="margin: 0 0 20px; font-size: 25px; font-weight: 500; text-align: center">Experience</p><sc-for list="{{ exp }}" as="r" hint-placeholder-count="4"><div style="display: flex; justify-content: space-between; gap: 20px; padding: 15px 0"><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 20px; font-weight: 500; color: #1c2430">{{ r.a }}</span><span style="font-size: 17px; color: #4a5568">{{ r.b }}</span></div><span style="font-size: 18px; font-weight: 500; color: #1c2430; white-space: nowrap">{{ r.c }}</span></div></sc-for></div>
+      <div><p style="margin: 0 0 20px; font-size: 25px; font-weight: 500; text-align: center">Education</p><sc-for list="{{ edu }}" as="r" hint-placeholder-count="4"><div style="display: flex; justify-content: space-between; gap: 20px; padding: 15px 0"><div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 20px; font-weight: 500; color: #1c2430">{{ r.a }}</span><span style="font-size: 17px; color: #4a5568">{{ r.b }}</span></div><span style="font-size: 18px; font-weight: 500; color: #1c2430; white-space: nowrap">{{ r.c }}</span></div></sc-for></div>
+    </section>
+
+    
+
+    <section id="contact" class="m-sec" style="max-width: 1240px; margin: 0 auto; padding: 0 40px 140px; display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center">
+      <p style="margin: 0 0 8px; font-size: 30px; font-weight: 500">Get in touch!</p>
+      <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 17.5px; color: #4a5568">Email</span><a href="mailto:louise.lynge@hotmail.com" style="font-size: 20px; font-weight: 500">louise.lynge@hotmail.com</a></div>
+      <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 17.5px; color: #4a5568">Phone</span><span style="font-size: 20px; font-weight: 500">+45 28736886</span></div>
+      <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 17.5px; color: #4a5568">Located</span><span style="font-size: 20px; font-weight: 500">Copenhagen</span></div>
+      <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 17.5px; color: #4a5568">LinkedIn</span><a href="https://www.linkedin.com/in/louise-lynge-thorup-676348204" style="font-size: 20px; font-weight: 500">Let’s connect!</a></div>
+    </section>
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isProject }}" hint-placeholder-val="{{ false }}">
+  <div class="m-pnav" style="max-width: 1236px; margin: 0 auto; padding: 24px 68px 0; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; font-size: 15px">
+    <button onClick="{{ goIndex }}" style="min-height: 44px; display: flex; align-items: center; gap: 8px; color: #4a5568"><span aria-hidden="true">←</span> All projects</button>
+    <div style="display: flex; align-items: center; gap: 20px; color: #4a5568"><button onClick="{{ prv.go }}" style="min-height: 44px">← Previous</button><span aria-hidden="true" style="color: #c4c9d0">|</span><span style="color: #1c2430; font-weight: 500">{{ posLabel }}</span><span aria-hidden="true" style="color: #c4c9d0">|</span><button onClick="{{ nxt.go }}" style="min-height: 44px">Next →</button></div>
+  </div>
+  <sc-if value="{{ isFigmaPage }}" hint-placeholder-val="{{ true }}">
+  <article class="m-fig" style="max-width: 1236px; margin: 0 auto; padding: 48px 68px 0; box-sizing: border-box">
+    <div style="display: flex; flex-direction: column; gap: 22px; max-width: 640px">
+      <h1 style="margin: 0; font-size: 34px; font-weight: 400; line-height: 1.2">{{ caseTitle }}</h1>
+      <p style="margin: -8px 0 0; font-size: 18px; line-height: 1.5; color: #4a5568">{{ cur.sub }}</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4a5568">{{ cur.intro }}</p>
+    </div>
+    <sc-if value="{{ showMeta }}" hint-placeholder-val="{{ false }}"><div class="m-meta" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 36px"><sc-for list="{{ cur.meta }}" as="m" hint-placeholder-count="4"><div style="display: flex; flex-direction: column; gap: 6px; padding-top: 14px; border-top: 1px solid #e4e7eb"><span style="font-size: 14px; color: #4a5568">{{ m.k }}</span><span style="font-size: 15px; font-weight: 500; line-height: 1.45">{{ m.v }}</span></div></sc-for></div></sc-if>
+    <sc-for list="{{ blocks }}" as="b" hint-placeholder-count="4">
+      <sc-if value="{{ b.isPanel }}" hint-placeholder-val="{{ true }}"><div class="m-panel" style="{{ b.boxStyle }}"><sc-for list="{{ b.imgs }}" as="im" hint-placeholder-count="1"><sc-if value="{{ im.hasSrc }}" hint-placeholder-val="{{ true }}"><div style="{{ im.wrap }}"><sc-if value="{{ im.isPic }}" hint-placeholder-val="{{ true }}"><img src="{{ im.src }}" alt="{{ im.label }}" loading="lazy" onLoad="{{ im.onLoad }}" style="{{ im.style }}"></sc-if><sc-if value="{{ im.isVid }}" hint-placeholder-val="{{ false }}"><video src="{{ im.vsrc }}" poster="{{ im.src }}" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-label="{{ im.label }}" style="{{ im.style }}"></video></sc-if></div></sc-if><sc-if value="{{ im.noSrc }}" hint-placeholder-val="{{ false }}"><div style="{{ im.phStyle }}">[Image: {{ im.label }}]</div></sc-if></sc-for></div></sc-if>
+      <sc-if value="{{ b.isRow }}" hint-placeholder-val="{{ false }}"><div class="m-row2" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center; margin-top: 72px">
+        <div style="{{ b.textCol }}"><sc-if value="{{ b.hasH }}" hint-placeholder-val="{{ true }}"><h2 style="margin: 0; font-size: 18px; font-weight: 500; color: #1c2430">{{ b.h }}</h2></sc-if><sc-if value="{{ b.hasT }}" hint-placeholder-val="{{ true }}"><p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4a5568">{{ b.t }}</p></sc-if><sc-if value="{{ b.hasQuote }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 36px; border-radius: 6px; background: #cfe5fb; font-family: Roboto, sans-serif; font-weight: 300; font-size: 26px; line-height: 1.35; color: #1c2430">{{ b.quote }}</p></sc-if><sc-for list="{{ b.textImgs }}" as="im" hint-placeholder-count="0"><sc-if value="{{ im.hasSrc }}" hint-placeholder-val="{{ true }}"><div style="{{ im.wrap }}"><sc-if value="{{ im.isPic }}" hint-placeholder-val="{{ true }}"><img src="{{ im.src }}" alt="{{ im.label }}" loading="lazy" onLoad="{{ im.onLoad }}" style="{{ im.style }}"></sc-if><sc-if value="{{ im.isVid }}" hint-placeholder-val="{{ false }}"><video src="{{ im.vsrc }}" poster="{{ im.src }}" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-label="{{ im.label }}" style="{{ im.style }}"></video></sc-if></div></sc-if><sc-if value="{{ im.noSrc }}" hint-placeholder-val="{{ false }}"><div style="{{ im.phStyle }}">[Image: {{ im.label }}]</div></sc-if></sc-for></div>
+        <div class="m-mediacol" style="{{ b.mediaCol }}"><sc-for list="{{ b.imgs }}" as="im" hint-placeholder-count="1"><sc-if value="{{ im.hasSrc }}" hint-placeholder-val="{{ true }}"><div style="{{ im.wrap }}"><sc-if value="{{ im.isPic }}" hint-placeholder-val="{{ true }}"><img src="{{ im.src }}" alt="{{ im.label }}" loading="lazy" onLoad="{{ im.onLoad }}" style="{{ im.style }}"></sc-if><sc-if value="{{ im.isVid }}" hint-placeholder-val="{{ false }}"><video src="{{ im.vsrc }}" poster="{{ im.src }}" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-label="{{ im.label }}" style="{{ im.style }}"></video></sc-if></div></sc-if><sc-if value="{{ im.noSrc }}" hint-placeholder-val="{{ false }}"><div style="{{ im.phStyle }}">[Image: {{ im.label }}]</div></sc-if></sc-for></div>
+      </div></sc-if>
+      <sc-if value="{{ b.isText }}" hint-placeholder-val="{{ false }}"><div style="display: flex; flex-direction: column; gap: 12px; max-width: 620px; margin-top: 72px"><sc-if value="{{ b.hasH }}" hint-placeholder-val="{{ true }}"><h2 style="margin: 0; font-size: 18px; font-weight: 500; color: #1c2430">{{ b.h }}</h2></sc-if><sc-if value="{{ b.hasT }}" hint-placeholder-val="{{ true }}"><p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4a5568">{{ b.t }}</p></sc-if><sc-if value="{{ b.hasQuote }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 36px; border-radius: 6px; background: #cfe5fb; font-family: Roboto, sans-serif; font-weight: 300; font-size: 26px; line-height: 1.35; color: #1c2430">{{ b.quote }}</p></sc-if></div></sc-if>
+      <sc-if value="{{ b.isPhotos }}" hint-placeholder-val="{{ false }}"><div style="display: flex; flex-direction: column; gap: 12px; margin-top: 32px"><sc-for list="{{ b.rows }}" as="row" hint-placeholder-count="1"><div class="m-photorow" style="display: flex; gap: 12px; align-items: flex-start"><sc-for list="{{ row.imgs }}" as="im" hint-placeholder-count="3"><sc-if value="{{ im.hasSrc }}" hint-placeholder-val="{{ true }}"><div style="{{ im.wrap }}"><sc-if value="{{ im.isPic }}" hint-placeholder-val="{{ true }}"><img src="{{ im.src }}" alt="{{ im.label }}" loading="lazy" onLoad="{{ im.onLoad }}" style="{{ im.style }}"></sc-if><sc-if value="{{ im.isVid }}" hint-placeholder-val="{{ false }}"><video src="{{ im.vsrc }}" poster="{{ im.src }}" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-label="{{ im.label }}" style="{{ im.style }}"></video></sc-if></div></sc-if><sc-if value="{{ im.noSrc }}" hint-placeholder-val="{{ false }}"><div style="{{ im.phStyle }}">[Image: {{ im.label }}]</div></sc-if></sc-for></div></sc-for></div></sc-if>
+      <sc-if value="{{ b.isTabs }}" hint-placeholder-val="{{ false }}"><div style="margin-top: 56px; padding: 24px 0 0; border-radius: 6px; background: #ffffff; border: 1px solid #ececec"><div role="tablist" aria-label="{{ b.tabLabel }}" style="display: flex; flex-wrap: wrap; gap: 12px; padding: 0 28px 8px"><sc-for list="{{ b.tabs }}" as="tb" hint-placeholder-count="4"><button role="tab" aria-selected="{{ tb.sel }}" onClick="{{ tb.pick }}" style="{{ tb.style }}">{{ tb.label }}</button></sc-for></div><img src="{{ b.tabSrc }}" alt="{{ b.tabAlt }}" style="display: block; width: 100%; height: auto; border-radius: 0 0 6px 6px"></div></sc-if>
+      <sc-if value="{{ b.isCards }}" hint-placeholder-val="{{ false }}"><div class="m-cards" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 28px"><sc-for list="{{ b.cards }}" as="c" hint-placeholder-count="6"><div style="background: #f4f4f4; border-radius: 6px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><h3 style="margin: 0; font-size: 17px; font-weight: 500; color: #b4531a">{{ c.t }}</h3><p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4a5568">{{ c.d }}</p></div></sc-for></div></sc-if>
+    </sc-for>
+    <div class="m-pn" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 110px; padding-top: 32px; border-top: 1px solid #e4e7eb">
+      <button onClick="{{ prv.go }}" style="display: flex; align-items: center; gap: 18px; padding: 14px; border-radius: 8px; background: #f6f7f9"><span style="{{ prv.thumb }}"><img src="{{ prv.img }}" alt="" style="width: 100%; height: 100%; object-fit: contain"></span><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 14px; color: #4a5568">← Previous</span><span style="font-size: 20px; font-weight: 500">{{ prv.short }}</span></span></button>
+      <button onClick="{{ nxt.go }}" style="display: flex; align-items: center; justify-content: flex-end; gap: 18px; padding: 14px; border-radius: 8px; background: #f6f7f9; text-align: right"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 14px; color: #4a5568">Next →</span><span style="font-size: 20px; font-weight: 500">{{ nxt.short }}</span></span><span style="{{ nxt.thumb }}"><img src="{{ nxt.img }}" alt="" style="width: 100%; height: 100%; object-fit: contain"></span></button>
+    </div>
+    <div style="display: flex; justify-content: center; padding: 40px 0 120px"><button onClick="{{ goIndex }}" style="font-weight: 500; min-height: 44px">Back to all projects</button></div>
+  </article>
+  </sc-if>
+  <sc-if value="{{ isFramerPage }}" hint-placeholder-val="{{ false }}">
+  <article class="m-fr" style="max-width: 1440px; margin: 0 auto; padding: 64px 100px 0; box-sizing: border-box; color: #000000">
+    <div class="fr-row" style="max-width: 916px"><h1 style="margin: 0; font-size: 48px; font-weight: 500; line-height: 1.2">{{ cur.title }}</h1>
+    <p style="margin: 16px 0 0; font-size: 30px; font-weight: 500; line-height: 1.4">{{ cur.sub }}</p>
+    <p style="margin: 40px 0 0; font-size: 22px; font-weight: 500; line-height: 1.4">{{ frIntro }}</p></div>
+    <div class="fr-row m-meta" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 40px">
+      <sc-for list="{{ frMeta }}" as="m" hint-placeholder-count="4"><div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 16px; font-weight: 500">{{ m.k }}</span><span style="font-size: 14px; font-weight: 500; line-height: 1.4; color: #969696; white-space: pre-line">{{ m.v }}</span></div></sc-for>
+    </div>
+    <sc-for list="{{ frRows }}" as="r" hint-placeholder-count="5">
+      <div class="fr-row m-frrow" style="{{ r.style }}"><sc-for list="{{ r.items }}" as="it" hint-placeholder-count="2"><div class="m-fritem" style="{{ it.outer }}"><div class="fr-media" style="{{ it.box }}">
+        <sc-if value="{{ it.isImg }}" hint-placeholder-val="{{ true }}"><img class="{{ it.imgCls }}" src="{{ it.src }}" alt="{{ it.label }}" loading="lazy" style="{{ it.media }}"></sc-if>
+        <sc-if value="{{ it.isVid }}" hint-placeholder-val="{{ false }}"><sc-if value="{{ it.loop }}" hint-placeholder-val="{{ true }}"><video src="{{ it.src }}" poster="{{ it.poster }}" autoplay="" muted="" loop="" playsinline="" aria-label="{{ it.label }}" style="{{ it.media }}"></video></sc-if><sc-if value="{{ it.controls }}" hint-placeholder-val="{{ false }}"><video src="{{ it.src }}" poster="{{ it.poster }}" controls="" playsinline="" preload="metadata" aria-label="{{ it.label }}" style="{{ it.media }}"></video></sc-if></sc-if>
+        <sc-if value="{{ it.isFrame }}" hint-placeholder-val="{{ false }}"><iframe src="{{ it.src }}" title="{{ it.label }}" allow="autoplay; fullscreen; picture-in-picture" style="{{ it.media }}"></iframe></sc-if>
+        <sc-if value="{{ it.hasOverlay }}" hint-placeholder-val="{{ false }}"><img src="{{ it.ovSrc }}" alt="{{ it.ovLabel }}" style="{{ it.ovStyle }}"></sc-if>
+        <sc-if value="{{ it.isQuote }}" hint-placeholder-val="{{ false }}"><p style="{{ it.qStyle }}">{{ it.t }}</p></sc-if>
+        <sc-if value="{{ it.isHSteps }}" hint-placeholder-val="{{ false }}"><div class="m-hsteps" style="display: flex; gap: 30px; align-items: flex-start; justify-content: space-between; width: 100%"><div style="flex: 0 1 46%; display: flex; flex-direction: column; gap: 6px"><sc-for list="{{ it.steps }}" as="st" hint-placeholder-count="5"><div tabIndex="0" role="button" aria-pressed="{{ st.sel }}" onMouseEnter="{{ st.pick }}" onFocus="{{ st.pick }}" onClick="{{ st.pick }}" style="{{ st.style }}"><h3 style="margin: 0; display: flex; gap: 14px; font-size: 22px; font-weight: 500; line-height: 1.4"><span style="{{ st.numStyle }}">{{ st.n }}</span><span>{{ st.h }}</span></h3><p style="{{ st.pStyle }}">{{ st.t }}</p></div></sc-for></div><div style="position: relative; flex: 0 1 48%; aspect-ratio: 584 / 548; border-radius: 24px; overflow: hidden; background: #f6f6f6"><sc-for list="{{ it.shots }}" as="sh" hint-placeholder-count="5"><img src="{{ sh.src }}" alt="{{ sh.label }}" loading="lazy" style="{{ sh.style }}"></sc-for></div></div></sc-if>
+        <sc-if value="{{ it.isText }}" hint-placeholder-val="{{ false }}"><div class="m-frtext" style="{{ it.textBox }}"><sc-for list="{{ it.parts }}" as="pt" hint-placeholder-count="1"><div style="display: flex; flex-direction: column; gap: 10px"><sc-if value="{{ pt.hasH }}" hint-placeholder-val="{{ true }}"><h3 style="margin: 0; font-size: 22px; font-weight: 500; line-height: 1.4">{{ pt.h }}</h3></sc-if><sc-if value="{{ pt.hasT }}" hint-placeholder-val="{{ true }}"><p style="{{ pt.tStyle }}">{{ pt.t }}</p></sc-if></div></sc-for></div></sc-if>
+      </div><sc-if value="{{ it.hasCap }}" hint-placeholder-val="{{ false }}"><p style="margin: 12px 0 0; font-size: 14px; font-weight: 500; line-height: 1.4; color: #969696">{{ it.cap }}</p></sc-if></div></sc-for></div>
+    </sc-for>
+    <div class="m-pn" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 110px; padding-top: 32px; border-top: 1px solid #e4e7eb">
+      <button onClick="{{ prv.go }}" style="display: flex; align-items: center; gap: 18px; padding: 14px; border-radius: 8px; background: #f6f7f9"><span style="{{ prv.thumb }}"><img src="{{ prv.img }}" alt="" style="width: 100%; height: 100%; object-fit: contain"></span><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 14px; color: #4a5568">← Previous</span><span style="font-size: 20px; font-weight: 500">{{ prv.short }}</span></span></button>
+      <button onClick="{{ nxt.go }}" style="display: flex; align-items: center; justify-content: flex-end; gap: 18px; padding: 14px; border-radius: 8px; background: #f6f7f9; text-align: right"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 14px; color: #4a5568">Next →</span><span style="font-size: 20px; font-weight: 500">{{ nxt.short }}</span></span><span style="{{ nxt.thumb }}"><img src="{{ nxt.img }}" alt="" style="width: 100%; height: 100%; object-fit: contain"></span></button>
+    </div>
+    <div style="display: flex; justify-content: center; padding: 40px 0 120px"><button onClick="{{ goIndex }}" style="font-weight: 500; min-height: 44px">Back to all projects</button></div>
+  </article>
+  </sc-if>
+  </sc-if>
+</div>
+</template>
+<script>
+(function(){
+  var MEDIA = {"a319bf36622538af1b2fd03a9bda7196":1,"73561e990d0e9e7ee36acb26d69c166b":1,"360fff04c7c1abc86102fee6503fb257":1,"5320b9565f805c0c1497d5947a8f9c34":1,"78b9bac9df5c2e68c87a234901ef91f0":1,"07da51131efdbc332ffb694aaf13727f":1,"c6ca765ae149e0bb37dfe6fe55d45eaf":1,"0a59e6c43c0ab70513eb55858085bb1f":1,"73b69ce1044108302aba716177cf2f0f":1,"5ce756bbf9fdc0517e95570a08c281fd":1,"e6544d121ad77dcd43646ba0cd39221f":1,"1655fb4ae8a090a574c6838aefb95cf0":1,"a2117bc16d8acbd614fdebf3ec205b8b":1,"a798466b4e9076364b442d138a3e4155":1,"d24ba0d0a623e4a21bef252091f2edcb":1,"7a22de7e437ae7441d61200a86e19c10":1,"833146a8fb8d6cd64d62a1c266d70a74":1,"23b3898be5bde374c694b71aaf6989a1":1,"2ff491d51884fcec9a3d9da5fbe0cfb7":1,"44191c121f7968be0a85485090a76d83":1,"b0ea66f93ba308d816606e518b5d4016":1,"55d6f66d187fed46b2582a83e1765052":1,"5bd8c1d49211a769e2dff6c4cd590c1f":1,"9bce70a9d8f2935c8eaf4f280e2f8fa3":1,"96da546ee8d67e60390876e3a4abda84":1,"b19958529f40bccae6a1b755960cc8ca":1,"ff6cd613ee463fd28c4817d8a5c697b2":1,"2b2dfaf9f9bee294c0fffe775dbcab06":1,"fc4b743ee5311091f70331800da29785":1,"e0cf3498c55d047eb9ed865d85792fad":1,"a026f770c2b770b98b89e7d218996311":1,"d4dd0a3348f0ba373d4b339c0a7c9e5e":1,"c3a46a0349a3f09da259d956ac95fdb3":1,"f6b07a3a01147c79e4e04df5b9fa33f9":1,"e0446d178bd06debb3eec0f24fa7c7f8":1,"3b32527d029b9e633a030259ab86b504":1,"8fabb21d0e1feaa1009f4678c97acc01":1,"40cb34c5b21b51969fbfd830e638f6dd":1,"265a6426cb43b6a4d8b0c59235aed533":1,"3baf5ea6ee8583a52a0ebfc9c6d4d9a1":1,"6e8621b78c5a1420958e20a34a94f3c6":1,"9f34e368acf7382c3ac39217d9d9c37e":1,"1a22860c7e537c6b43fd907b01da9a78":1,"55900fb4eae1a6cb0211d3c1c1de8c8b":1,"65e860347ccc472d74f19f530f05fb73":1,"f19ccb4bb4aa34e08ad5972c019a987a":1,"70202837d9dbe2c02c94ce2bb40ade95":1,"e9aabef717895801e67035ebe0621f55":1,"fd6ea0cb3314f5ac4bf57f3852a2fad1":1,"13007e508b89617417d3cd557f139ba9":1,"c8a50684f42c3cb82af4e9dbc8c1a6aa":1,"1263ae2b35c00bf757588752d1575c3f":1,"5e2fea13fa29266ee1b8fe3c6b0c6ebc":1,"8d0946ce0445a509bc5f293d4d1cfd5f":1,"0d75178846735c75faae4c7c61176c0f":1,"ebcd36cd86043f7b2013c2f8911ee6ff":1,"3ccce00fbee3bcf8100182a5f854ab43":1,"700486367ba8aaa588be601f3acc0f10":1,"24ae0f043c0cfd4eb6f7f7dc5cee9e9e":1,"e6466d1e3ae9b4f4a8c4aaf1ec48e4f1":1};
+  var AM = {"436dc68b55f0664f353b212448309271": "jpg", "015361137106439d3d38c3f4e5997aef": "png", "022a43dbfa9b0a00d8038311979ec5a2": "jpg", "0608123a988f4b9727a9850d09eb03bb": "jpg", "07da51131efdbc332ffb694aaf13727f": "jpg", "0818b0f6b048042d9aef17056e8a6370": "jpg", "08c05d4482e015d21fe1c37e54e0cfb6": "jpg", "0a59e6c43c0ab70513eb55858085bb1f": "jpg", "0d75178846735c75faae4c7c61176c0f": "jpg", "0f81c20cbded8ac84f80e37ad1a04394": "jpg", "1263ae2b35c00bf757588752d1575c3f": "mp4", "13007e508b89617417d3cd557f139ba9": "png", "1655fb4ae8a090a574c6838aefb95cf0": "webp", "1685675064406c52cb7753402c36577d": "jpg", "1a22860c7e537c6b43fd907b01da9a78": "jpg", "1d574c9c0adb2e734a6f9fa12bd44c0f": "jpg", "1f02a4daea845bca91130b46974bfae9": "jpg", "20e2fb9886599dae0f15b95ef5cb59f2": "png", "23b3898be5bde374c694b71aaf6989a1": "png", "24ae0f043c0cfd4eb6f7f7dc5cee9e9e": "mp4", "265a6426cb43b6a4d8b0c59235aed533": "jpg", "2b2dfaf9f9bee294c0fffe775dbcab06": "gif", "2dfc35f3517badab44b7eb80cb628ed6": "png", "2f1049a617c8580a91a0e79af467d407": "jpg", "2f1f79288259e707ffa2820e5503ab34": "png", "2ff491d51884fcec9a3d9da5fbe0cfb7": "png", "30a6c8432ade744370156d03e542e7d0": "jpg", "360fff04c7c1abc86102fee6503fb257": "jpg", "3623dbd77256a9fb91037e88d1f96e9d": "gif", "3a7ec89830d14d570111719d9463bc13": "jpg", "3a8946a57275b6c7fbbc122b2a1a04d0": "jpg", "3b32527d029b9e633a030259ab86b504": "mp4", "3baf5ea6ee8583a52a0ebfc9c6d4d9a1": "jpg", "3c4f5d91769a326100dddf297156699c": "png", "3ccce00fbee3bcf8100182a5f854ab43": "png", "40cb34c5b21b51969fbfd830e638f6dd": "mp4", "40fb8557134b196cd7fcfce1f7e98238": "jpg", "44191c121f7968be0a85485090a76d83": "jpg", "44ac2c4243ef63fc9eef4e1dc80612be": "jpg", "4b301ad2235a91c7e9049cb47d517b3b": "jpg", "4da70a10e9fa4a044e6a6286761a6c6d": "jpg", "51c128719bc6bdefe2ecec8115748e23": "jpg", "5320b9565f805c0c1497d5947a8f9c34": "jpg", "55900fb4eae1a6cb0211d3c1c1de8c8b": "jpg", "55d6f66d187fed46b2582a83e1765052": "jpg", "587ecdea558e7fde54b1a4270e316773": "jpg", "5bd8c1d49211a769e2dff6c4cd590c1f": "jpg", "5ce756bbf9fdc0517e95570a08c281fd": "jpg", "5e2fea13fa29266ee1b8fe3c6b0c6ebc": "png", "607cfe32653ad77e9f34d363ab05b99c": "jpg", "60a5b2869e350f13c22f9a3389b5a6ac": "jpg", "65e860347ccc472d74f19f530f05fb73": "jpg", "6d16da32d875268fc2d1d42ce1de9ce7": "png", "6daf9a1a147029258252b1766201a0d2": "png", "6e4786a003deb8fb8a35e29051f7cec1": "jpg", "6e5850dc06a1a2bba50047146401330a": "jpg", "6e8621b78c5a1420958e20a34a94f3c6": "jpg", "6f4e4a45fb1e5bc2882014babf553565": "jpg", "700486367ba8aaa588be601f3acc0f10": "webp", "70202837d9dbe2c02c94ce2bb40ade95": "png", "73561e990d0e9e7ee36acb26d69c166b": "jpg", "73b69ce1044108302aba716177cf2f0f": "webp", "751de072de5d9c2ca52289a8745f7235": "png", "78b9bac9df5c2e68c87a234901ef91f0": "jpg", "7911b6288c851ce9a54d71d575db01e2": "png", "79fa046bd5d49e7b6c9c55445c1bf6fa": "png", "7a22de7e437ae7441d61200a86e19c10": "mp4", "7bc438b10eaaa6d0a9e898e608dfed04": "jpg", "7bd84190b2fe9ab6b06888d779f29407": "jpg", "806126d341aa0c03fa7487b1f3f87efa": "png", "833146a8fb8d6cd64d62a1c266d70a74": "gif", "83fae54a69fb8aacb991bfd1527490d7": "jpg", "845900c64fae73fff5764683e626ecdf": "png", "850519dfc43a3db6712233569b91a57c": "jpg", "8d0946ce0445a509bc5f293d4d1cfd5f": "jpg", "8f0b281ecd3bd24ee7e8b52e1ac40767": "jpg", "8fabb21d0e1feaa1009f4678c97acc01": "jpg", "946577b245430f2c858f830d9e65564c": "png", "964dd6e57864b63b9b22dc8877e01a97": "jpg", "96d29dd3333c67e27df1b4fd35f3a73a": "jpg", "96da546ee8d67e60390876e3a4abda84": "jpg", "9bce70a9d8f2935c8eaf4f280e2f8fa3": "jpg", "9bded0bd888309ca7f97c0889f616386": "jpg", "9ca77ba8f064eb5a7179bc22331a40a0": "jpg", "9f34e368acf7382c3ac39217d9d9c37e": "jpg", "a026f770c2b770b98b89e7d218996311": "png", "a1dceb5170c51a794893a60515337e8b": "jpg", "a2117bc16d8acbd614fdebf3ec205b8b": "jpg", "a24ca272ceed5c2eb29435975608e2dc": "png", "a319bf36622538af1b2fd03a9bda7196": "webp", "a54e6ca64e0ca71908ce55b5a1b8aa28": "png", "a7339409a4718923d000cd7927fb9e2b": "jpg", "a798466b4e9076364b442d138a3e4155": "jpg", "b071f0177eda2912a8ff088b2e985970": "png", "b0ea66f93ba308d816606e518b5d4016": "mp4", "b19958529f40bccae6a1b755960cc8ca": "jpg", "b95e03c12d05b219ef31f6bf18a4e2f5": "jpg", "c299edcd1e152779de6e7240b3102b9d": "jpg", "c3a46a0349a3f09da259d956ac95fdb3": "jpg", "c6adfd0e61471260e70c154218719a66": "png", "c6ca765ae149e0bb37dfe6fe55d45eaf": "jpg", "c8423056c7aa41694f03545a89ec2036": "jpg", "c8a50684f42c3cb82af4e9dbc8c1a6aa": "jpg", "c8df22e841d5558704a6144ee7b351c4": "jpg", "c939562cf981581f9feef1bc940facec": "jpg", "d24ba0d0a623e4a21bef252091f2edcb": "mp4", "d2dd55484a36c1ad28d3625cdbc7221e": "jpg", "d4dd0a3348f0ba373d4b339c0a7c9e5e": "jpg", "d60ba129b4f2eb64863aef01fcb50748": "png", "d6fe39a53d01bbcc89ecaa4014760c27": "jpg", "d9028c973e66861b4da89299aa0bda15": "png", "dcc03c6b446288918ab78c44cfe08836": "jpg", "dcfa916f878924ec6b41494d31123cee": "png", "dcff4aff7432ef26a7b79dca24908f0f": "jpg", "e0446d178bd06debb3eec0f24fa7c7f8": "mp4", "e0cf3498c55d047eb9ed865d85792fad": "mp4", "e4a658e42056248452467da47e441309": "jpg", "e6466d1e3ae9b4f4a8c4aaf1ec48e4f1": "mp4", "e6544d121ad77dcd43646ba0cd39221f": "jpg", "e91ce387c7077e3fe30d3779bf84b2cc": "png", "e9aabef717895801e67035ebe0621f55": "webp", "ebcd36cd86043f7b2013c2f8911ee6ff": "gif", "f19ccb4bb4aa34e08ad5972c019a987a": "jpg", "f543706c3493ac14318f5288f28b4aee": "jpg", "f5c00286a67d29eea1197bb02c2b3857": "jpg", "f6b07a3a01147c79e4e04df5b9fa33f9": "jpg", "f80f21b61650d6c387fef7fee333a0eb": "jpg", "f82a09aea5a955617824121e7fa88350": "jpg", "f8fb4f0e0d20b2996716aca1b586dde7": "jpg", "fc4b743ee5311091f70331800da29785": "jpg", "fd6ea0cb3314f5ac4bf57f3852a2fad1": "webp", "fd960670bc3dffcb91b31eff008bd078": "jpg", "ff6cd613ee463fd28c4817d8a5c697b2": "jpg"};
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  function asset(v){ if (typeof v === 'string' && v.indexOf('/_blob/') !== -1) return v.replace(/\/_blob\/([0-9a-f]{32})/g, function(m, id){ return AM[id] ? (MEDIA[id] ? 'media/' : 'assets/') + id + '.' + AM[id] : m; }); return v; }
+  function lookup(scope, expr){ var parts = expr.trim().split('.'); var v; for (var i = scope.length - 1; i >= 0; i--) { if (scope[i] && Object.prototype.hasOwnProperty.call(scope[i], parts[0])) { v = scope[i][parts[0]]; break; } } for (var k = 1; k < parts.length && v != null; k++) v = v[parts[k]]; return v; }
+  var ONE = /^\s*\{\{\s*([^}]+?)\s*\}\}\s*$/;
+  function interp(str, scope){ return str.replace(/\{\{\s*([^}]+?)\s*\}\}/g, function(_, e){ var v = lookup(scope, e); return v == null ? '' : String(asset(v)); }); }
+  function build(tpl, scope, out){
+    for (var c = tpl.firstChild; c; c = c.nextSibling) {
+      if (c.nodeType === 3) { out.push({ t: 3, v: interp(c.nodeValue, scope) }); continue; }
+      if (c.nodeType !== 1) continue;
+      var tag = c.localName;
+      if (tag === 'sc-for') { var lm = ONE.exec(c.getAttribute('list') || ''); var list = lm ? lookup(scope, lm[1]) : null; var as = c.getAttribute('as') || 'item'; if (list && list.length) for (var i = 0; i < list.length; i++) { var o = {}; o[as] = list[i]; build(c, scope.concat([o]), out); } continue; }
+      if (tag === 'sc-if') { var vm = ONE.exec(c.getAttribute('value') || ''); if (vm && lookup(scope, vm[1])) build(c, scope, out); continue; }
+      var n = { t: 1, tag: tag, ns: c.namespaceURI, attrs: {}, on: {}, kids: [] };
+      for (var a = 0; a < c.attributes.length; a++) { var at = c.attributes[a], name = at.name, val = at.value; if (name.indexOf('hint-') === 0) continue;
+        var one = ONE.exec(val);
+        if (one) { var v = lookup(scope, one[1]); if (typeof v === 'function') { if (name.indexOf('on') === 0) n.on[name.slice(2).toLowerCase()] = v; continue; } if (v == null || v === false) continue; n.attrs[name] = String(asset(v)); }
+        else n.attrs[name] = interp(val, scope);
+      }
+      build(c.localName === 'template' ? c.content : c, scope, n.kids);
+      out.push(n);
+    }
+    return out;
+  }
+  function create(v){ if (v.t === 3) return document.createTextNode(v.v); var el = v.ns && v.ns !== 'http://www.w3.org/1999/xhtml' ? document.createElementNS(v.ns, v.tag) : document.createElement(v.tag); el.__h = {}; patchEl(el, v); return el; }
+  function handler(ev){ var f = this.__h && this.__h[ev.type]; if (f) f(ev); }
+  function patchEl(el, v){
+    var old = el.__a || {}; for (var k in old) if (!(k in v.attrs)) el.removeAttribute(k);
+    for (var k2 in v.attrs) if (old[k2] !== v.attrs[k2]) el.setAttribute(k2, v.attrs[k2]);
+    el.__a = v.attrs;
+    if (el.localName === 'video') { el.muted = 'muted' in v.attrs; if ('autoplay' in v.attrs && el.paused) { var p = el.play && el.play(); if (p && p.catch) p.catch(function(){}); } }
+    el.__h = el.__h || {}; for (var e in v.on) { if (!el.__h[e]) el.addEventListener(e, handler); } for (var e2 in el.__h) if (!v.on[e2]) el.removeEventListener(e2, handler);
+    el.__h = v.on;
+    patchKids(el, v.kids);
+  }
+  function patchKids(parent, kids){
+    var i = 0;
+    for (; i < kids.length; i++) { var v = kids[i], cur = parent.childNodes[i];
+      if (!cur) { parent.appendChild(create(v)); continue; }
+      if (v.t === 3) { if (cur.nodeType === 3) { if (cur.nodeValue !== v.v) cur.nodeValue = v.v; } else parent.replaceChild(create(v), cur); continue; }
+      if (cur.nodeType !== 1 || cur.localName !== v.tag) { parent.replaceChild(create(v), cur); continue; }
+      if (cur.localName === 'img' && cur.getAttribute('src') !== v.attrs.src) { parent.replaceChild(create(v), cur); continue; }
+      if (cur.localName === 'video' && cur.getAttribute('src') !== v.attrs.src) { parent.replaceChild(create(v), cur); continue; }
+      patchEl(cur, v);
+    }
+    while (parent.childNodes.length > kids.length) parent.removeChild(parent.lastChild);
+  }
+  window.DCLogic = function DCLogic(props){ this.props = props || {}; this.state = {}; };
+  window.DCLogic.prototype.setState = function(o){ var n = typeof o === 'function' ? o(this.state) : o; for (var k in n) this.state[k] = n[k]; schedule(); };
+  var comp, tplRoot, root, queued = false;
+  function schedule(){ if (queued) return; queued = true; requestAnimationFrame(function(){ queued = false; render(); }); }
+  function stateToHash(s){ if (s.view === 'project') return '#/' + s.pid; if (s.view === 'about') return '#/about'; return '#/'; }
+  function hashToState(){ var h = (location.hash || '').replace(/^#\/?/, ''); if (!h) return { view: 'index' }; if (h === 'about') return { view: 'about' }; return { view: 'project', pid: h }; }
+  var lastHash = null, firstR = true;
+  function render(){
+    var vals = comp.renderVals();
+    patchKids(root, build(tplRoot, [vals], []));
+    var h = stateToHash(comp.state); if (h !== lastHash || firstR) { firstR = false; lastHash = h; if (location.hash !== h && !(h === '#/' && !location.hash)) history.pushState(null, '', h); document.title = TITLE(comp.state, vals); }
+  }
+  function TITLE(s, v){ var base = 'Louise Lynge Thorup – UI/UX Designer'; if (s.view === 'project') { var h1 = document.querySelector('#app h1'); if (h1 && h1.textContent.trim()) return h1.textContent.trim() + ' – Louise Lynge Thorup'; } if (s.view === 'about') return 'About – Louise Lynge Thorup'; return base; }
+  window.__dcStart = function(Component){
+    tplRoot = document.getElementById('tpl').content; root = document.getElementById('app');
+    comp = new Component({});
+    var init = hashToState(); for (var k in init) comp.state[k] = init[k];
+    lastHash = stateToHash(comp.state);
+    window.addEventListener('popstate', function(){ var st = hashToState(); lastHash = stateToHash(st); firstR = true; comp.setState(st); window.scrollTo(0, 0); });
+    render();
+  };
+})();
+</script>
+<script>
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { view: 'index', pid: 'aeldre', hovered: null, hoveredThing: null };
+  }
+  renderVals() {
+    const ALLOW_SPLIT = true;
+    const b = (id) => '/_blob/' + id;
+    const ui = (id, label, bg) => ({ src: b(id), label, fit: 'panel', bg: bg || '#eef3f8' });
+    const ph = (id, label) => ({ src: b(id), label, fit: 'cover', bg: '#e9e9e9' });
+    const fl = (id, label, bg) => ({ src: b(id), label, fit: 'contain', bg: bg || '#ffffff' });
+    const sec = (h, t, imgs, o) => ({ h, t, imgs: imgs || [], layout: (o && o.layout) || 'stack', quote: (o && o.quote) || '', cards: (o && o.cards) || [] });
+    const P = [
+      { id: 'aeldre', title: 'Ældre Sagen’s Digital Member Universe', short: 'Ældre Sagen', sub: 'Personalisation as a design strategy for the transition to retirement', tags: 'Co-design · UX/UI · Thesis', year: '2026', img: b('9bce70a9d8f2935c8eaf4f280e2f8fa3'), bg: '#ffffff', fit: 'cover', pos: 'center',
+        meta: [['Collaborator', 'Ældre Sagen'], ['Type', 'Master’s thesis, UX/UI'], ['Technologies', 'Figma'], ['Methods & Tools', 'Qualitative interviews, co-design workshops, iterative prototyping, think-aloud tests, design system']],
+        intro: 'The transition from working life to retirement is one of the most significant life changes a person goes through, yet digital platforms rarely design for it. In collaboration with Ældre Sagen, this thesis explores how personalisation can support motivation and perceived relevance for members navigating that transition, using their upcoming digital member platform DiBU as the design context. Working across qualitative interviews, co-design workshops, and three rounds of iterative prototyping, we developed DiBU 2.0: a conceptual high-fidelity prototype that introduces a personalised member experience.',
+        sections: [
+          sec('The personalisation flow', 'The personalisation flow is designed as an invitation where members choose how much they share across nine skippable steps. The platform then balances that input with system-driven recommendations based on life stage and behaviour.', [ui('dcc03c6b446288918ab78c44cfe08836', 'Step 1 of 9', '#b5dafb'), ui('c8df22e841d5558704a6144ee7b351c4', 'Step 4 of 9', '#b5dafb')], { layout: 'split' }),
+          sec('Activities & benefits', 'Content is tagged to show whether a recommendation is based on personal interests or local popularity, keeping the experience transparent. A map view allows members to explore activities by location, and filters for date and type make the offering easy to navigate without narrowing it down completely.', [ui('08c05d4482e015d21fe1c37e54e0cfb6', 'Activities and benefits', '#b5dafb')], { layout: 'split' }),
+          sec('Co-creation workshops', 'Two co-design workshops placed participants as active contributors rather than informants, surfacing needs and tensions that interviews alone would not have reached. Their language, priorities, and contradictions directly shaped the design decisions made throughout the process.', [ph('c3a46a0349a3f09da259d956ac95fdb3', 'Collage workshop'), fl('13007e508b89617417d3cd557f139ba9', 'Collage from the workshop')], { layout: 'split' }),
+          sec('Personalised retirement guidance', 'The knowledge and guidance section gives members access to structured information on economy, housing, healthcare, and everyday life. The content is designed to be relevant to where the member is in their transition, not a generic overview of what retirement might eventually involve.', [ui('265a6426cb43b6a4d8b0c59235aed533', 'Knowledge and guidance', '#b5dafb')], { layout: 'split' }),
+          sec('My profile', 'Members can view and adjust their personalisation data at any time, seeing what the platform knows about them and updating it as their situation changes. This transparency gives members direct control over how the platform adapts to them.', [ui('3a7ec89830d14d570111719d9463bc13', 'My profile', '#b5dafb')], { layout: 'split' }),
+          sec('Standard vs. personalised', 'The same member page with standard data and with personalisation applied.', [ui('65e860347ccc472d74f19f530f05fb73', 'Standard', '#eef3f8'), ui('5320b9565f805c0c1497d5947a8f9c34', 'Personalised', '#eef3f8')])
+        ] },
+      { id: 'opiaid', title: 'OPI-AID', short: 'OPI-AID', sub: 'AI decision support for post-operative opioid dosing', tags: 'UX/UI · Health tech', year: '2025', img: b('3baf5ea6ee8583a52a0ebfc9c6d4d9a1'), bg: '#6bb5b3', fit: 'contain', pos: 'center',
+        meta: [['Collaborator', 'CEPRA'], ['Type', 'Group exam project, Digital Innovation in Practice'], ['Technologies', 'Figma'], ['Methods & Tools', 'Observation, cross-country interviews, user journey mapping, low-fidelity sketches, prototyping, testing']],
+        intro: 'Every year, 300 million surgeries are performed worldwide, yet there are no standardised guidelines for postoperative opioid dosing. In collaboration with CEPRA, we designed a web-based interface for the decision-support tool, OPIAID, to help anaesthesiologists calculate personalised opioid doses using a predictive AI model. The tool was designed to work across different national healthcare systems, and our process was grounded in fieldwork, cross-country interviews, and iterative prototyping with real clinical users.',
+        sections: [
+          sec('New assessment', 'New Assessment is the core of OPIAID. Clinicians enter 15–20 patient predictors and receive a recommended dose, predicted pain levels, and potential side effects. Inputs can be added through text, voice, files, or photos. Clinicians can adjust the recommendation or choose an alternative medication, with the system asking for a brief justification.', [fl('f82a09aea5a955617824121e7fa88350', 'Process: from initial exploration to testing and iteration', '#f4f4f4')], { layout: 'split' }),
+          sec('Different workflows and needs', 'The interviews revealed both shared challenges and country-specific needs. Germany inspired an AI-assisted photo input, while the UK highlighted the need for standardisation. Sweden emphasised multimodal pain management and post-operative feedback. Across all countries, clinicians wanted AI to support and not replace their professional judgment.', [fl('96d29dd3333c67e27df1b4fd35f3a73a', 'User journey before, during and after surgery', '#f4f4f4')]),
+          sec('Fieldwork', 'Observation at Bispebjerg Hospital gave us a first-hand look at the post-operative workflow.', [ph('8d0946ce0445a509bc5f293d4d1cfd5f', 'Observation at Bispebjerg Hospital'), ph('7bc438b10eaaa6d0a9e898e608dfed04', 'From the observation')]),
+          sec('Your History page', 'The Your History page gives each healthcare professional a personal log of all previous assessments. It shows which predictors were used, what dose was recommended and what was ultimately administered, and whether post-operative feedback has been added. The page is designed to support reflection and learning over time, allowing clinicians to evaluate their own decisions and track patterns across patients.', [ui('f6b07a3a01147c79e4e04df5b9fa33f9', 'Your History', '#6bb5b3')], { layout: 'split' }),
+          sec('Feature highlights', '', [], { cards: [
+            ['Opioid dose prediction', 'The core functionality of OPIAID, where the system predicts the optimal opioid. The user can input a variety of patient data and receive real-time, personalized opioid dosage recommendations.'],
+            ['Input flexibility', 'The interface offers flexibility by supporting multiple input methods, ensuring integration with both digital and paper-based record-keeping systems across diverse hospital environments.'],
+            ['Visual risk assessment', 'Each opioid dose recommendation is accompanied by a visual representation of risk, highlighting the likelihood of pain and potential side effects. This visual guide empowers clinicians to adjust dosages based on each patient’s specific needs and medical context.'],
+            ['Transparency', 'OPIAID ensures transparency by providing insights into how the algorithm arrived at its recommendations. It displays the factors influencing dosage predictions, building trust and enabling clinicians to make informed, confident decisions.'],
+            ['Alternative dosages and medications', 'Clinicians can select alternative dosages or medications, with a required justification for their choices. This flexibility ensures that OPIAID adapts to real-world medical decision-making while maintaining accountability and fostering clinical judgment.'],
+            ['Post-op feedback', 'After surgery, clinicians are prompted to provide feedback on the effectiveness of the prescribed opioid dosage. This feedback is essential for refining the algorithm, improving accuracy, and ensuring the system evolves based on real-world data.']] }),
+          sec('Final screens', '', [ui('f543706c3493ac14318f5288f28b4aee', 'Front page', '#6bb5b3'), ui('1f02a4daea845bca91130b46974bfae9', 'Adjusting the dose', '#6bb5b3'), ui('8fabb21d0e1feaa1009f4678c97acc01', 'Archive', '#6bb5b3')])
+        ] },
+      { id: 'onske', title: 'Ønskeskyen redesign', short: 'Ønskeskyen', sub: 'From transactional wishlists to relational gift-giving', tags: 'UX/UI · Redesign · Co-design', year: '2024', img: b('1685675064406c52cb7753402c36577d'), bg: '#cfe5fb', fit: 'contain', pos: 'center',
+        meta: [['Collaborator', 'Super-users aged 17–23'], ['Type', 'Group project, Advanced Design Processes'], ['Technologies', 'Figma'], ['Methods & Tools', 'Interaction criticism, co-design workshop, 635 brainwriting, concept walk-through, usability testing']],
+        intro: 'Ønskeskyen is Denmark’s leading digital wishlist platform, but its link-based model reduces gift-giving to a transaction: the recipient dictates the gift, and the giver’s personal touch disappears. In collaboration with a group of super-users aged 17 to 23, we investigated how a redesign could shift that balance. Our focus was on two core features: a reimagined wish creation flow that moves away from product links, and a Gift Generator that connects giver and receiver through shared interests rather than commercial recommendations.',
+        sections: [
+          sec('Create a wish', 'Ønskeskyen’s existing wish creation heavily prioritises product links, making wishlists feel like order forms. The redesign makes it easy and attractive to wish for things without links, prompting the user to choose between material and experiential categories and indicate whether second-hand is welcome. An AI-generated image feature visualises wishes that cannot be bought online, opening the space for gifts that are harder to define but more meaningful to receive.', [fl('fd6ea0cb3314f5ac4bf57f3852a2fad1', 'Create a wish flow', '#cfe5fb')], { layout: 'split' }),
+          sec('Co-creation workshop', 'A two-hour co-design workshop with four super-users placed participants as co-experts, using five activities to surface how they actually experience gift-giving and what feels meaningful to them.', [ph('c939562cf981581f9feef1bc940facec', 'Workshop'), ph('f19ccb4bb4aa34e08ad5972c019a987a', 'The Great Gift Game'), ph('5bd8c1d49211a769e2dff6c4cd590c1f', 'Scenario card')]),
+          sec('The Great Gift Game', 'The game used a board, pieces and scenario cards such as “If you were to give me a creative gift, what would it be?”. A key insight: the gifts participants saw as most meaningful rarely came from Ønskeskyen. Creative gifts and experiences stood out instead. As one participant said: “I’ve made a book of memories… it shows that they value your friendship.”', [ph('96da546ee8d67e60390876e3a4abda84', 'The game board'), ph('44ac2c4243ef63fc9eef4e1dc80612be', 'Workshop at a participant’s home')], { layout: 'split' }),
+          sec('Ideation and focus', 'Through 635 brainwriting we explored ideas inspired by social media: a personal moodboard, interest tags and shared memories. A design critique showed the prototype was too unfocused, so we narrowed it down to three core features: Create profile, Create wish and the Gift Generator.', [ph('d2dd55484a36c1ad28d3625cdbc7221e', 'Sketching the concept')], { layout: 'split' }),
+          sec('Gift Generator', 'The Gift Generator replaces advertising with relevance. By drawing on the shared interest tags of both giver and receiver, it generates personalised gift suggestions rooted in the relationship between them rather than commercial logic. It also offers inspiration for making a gift more personal or sustainable, adding a layer of thoughtfulness to the process.', [fl('e9aabef717895801e67035ebe0621f55', 'Gift Generator flow', '#cfe5fb')], { layout: 'split' }),
+          sec('Testing the redesign', 'We tested with two friends through concept walk-through and usability testing. Making a shared moodboard, they discovered new sides of each other’s style: “This picture kind of reminds me of you.” The extra steps in the Gift Generator were seen as a quality: “For people like us, I think it would be great.”', [ph('9f34e368acf7382c3ac39217d9d9c37e', 'Testing the prototype'), ph('f8fb4f0e0d20b2996716aca1b586dde7', 'Presenting at the expo')])
+        ] },
+      { id: 'bach', title: 'BachMouritsen SoMe', short: 'BachMouritsen SoMe', sub: 'Filming, editing and creating visuals for commercials', tags: 'Graphic design · Visual identity · Video editing · Animation', year: '2021', img: b('e6544d121ad77dcd43646ba0cd39221f'), bg: '#1c1c1c', fit: 'cover', pos: 'center',
+        meta: [['Collaborator', 'BachMouritsen'], ['Type', 'Graphic design, visual identity, video editing, animation'], ['Technologies', 'Illustrator, DaVinci Resolve, After Effects'], ['Methods & Tools', 'Developing the company’s visual style for SoMe in accordance with their visual identity, creating SoMe posts, assisting in filming, editing and creating animations for the video.']],
+        intro: 'BachMouritsen, a luxury jeweler and diamond company, sought a SoMe campaign to promote their latest jewelry collections, Chepré and Variété, inspired by art. My responsibilities involved developing their current visual identity to align with SoMe platforms, creating SoMe posts, filming assistant, editing, and creating animations for the video for the collection Chepré. This project was done during my internship at Plateau Agency.',
+        sections: [
+          sec('The campaign feed', '', [ui('b19958529f40bccae6a1b755960cc8ca', 'The campaign on Instagram', '#f4f4f4')]),
+          sec('Visual identity for SoMe', 'The posts pair the jewellery with art and historical imagery that tells the stories behind the collections.', [ph('0d75178846735c75faae4c7c61176c0f', 'Variété'), ph('0a59e6c43c0ab70513eb55858085bb1f', 'Art and storytelling'), ph('964dd6e57864b63b9b22dc8877e01a97', 'Behind the typography')]),
+          sec('Animation', '', [fl('700486367ba8aaa588be601f3acc0f10', 'Variété animation', '#1c1c1c'), ui('5ce756bbf9fdc0517e95570a08c281fd', 'The feed on mobile', '#f4f4f4')])
+        ] },
+      { id: 'art', title: 'Engaging a wider audience in art', short: 'Art for everyone', sub: 'Activating non connoisseurs at Art Museum Brandts', tags: 'User research · Graphic design', year: '2022', img: b('ebcd36cd86043f7b2013c2f8911ee6ff'), bg: '#dff2fb', fit: 'contain', pos: 'center',
+        meta: [['Collaborator', 'Art Museum Brandts'], ['Type', 'User research, graphic design'], ['Technologies', 'InDesign, Figma, Photoshop'], ['Methods & Tools', 'Academic research, semi-structured interviews, surveys, service safari, user journey, prototyping, testing']],
+        intro: 'Art Museum Brandts, a state-funded institution, aims to make art accessible to all. However, there is a significant focus on the art connoisseur when creating the exhibitions, making the exhibitions challenging to engage with without the proper prior knowledge. To address this, we’re integrating a book into the exhibition. The structured guide leads visitors through, fostering both personal exploration and group discussion.',
+        sections: [
+          sec('', '', [fl('a319bf36622538af1b2fd03a9bda7196', 'In the museum', '#e9e9e9')]),
+          sec('Segment groups', 'The museum presented us with 4 segment groups from which we chose to focus on a specific group called the “affirmers”. This segment consists of individuals with limited experience in experiencing art but who wish to expand their cultural horizons.', [fl('6e8621b78c5a1420958e20a34a94f3c6', 'The four segment groups', '#ffffff')], { layout: 'split' }),
+          sec('User research', 'We studied two exhibitions, “Samlingen – 250 years of Danish art” and Kathrine Ærtebjerg’s “De tusind gåders sted”, through interviews, surveys and a conversation with a museum curator.', [ph('6f4e4a45fb1e5bc2882014babf553565', 'The two exhibitions')], { layout: 'split' }),
+          sec('Exhibition experience', 'Through a service safari we experienced the exhibitions as the segment group would, to understand where the experience falls short without prior knowledge.', [ph('2b2dfaf9f9bee294c0fffe775dbcab06', 'In the exhibition')], { layout: 'split' }),
+          sec('Analysing insights', 'We mapped the user journey through the collection. The analysis showed that the affirmers are unsure of their own abilities, are looking for the “right” answers, and focus on how the museum communicates the art.', [ph('0f81c20cbded8ac84f80e37ad1a04394', 'User journey through the collection'), ph('8f0b281ecd3bd24ee7e8b52e1ac40767', 'Partial conclusion')]),
+          sec('Prototype & test', 'We prototyped a guide book that leads visitors through the exhibition with open questions, and tested it in the museum.', [ph('360fff04c7c1abc86102fee6503fb257', 'Guide book'), ph('fd960670bc3dffcb91b31eff008bd078', 'The design solution')]),
+          sec('The guide book in the collection', '', [ph('0608123a988f4b9727a9850d09eb03bb', 'Guide book in the collection'), ph('0818b0f6b048042d9aef17056e8a6370', 'Guide book in the collection'), ph('dcff4aff7432ef26a7b79dca24908f0f', 'Guide book in the collection'), ph('40fb8557134b196cd7fcfce1f7e98238', 'Guide book in the collection'), ph('2f1049a617c8580a91a0e79af467d407', 'Guide book in the collection'), ph('1a22860c7e537c6b43fd907b01da9a78', 'Guide book in the collection')])
+        ] },
+      { id: 'awe', title: 'Creativity is ‘awe’some', short: 'Creativity is ‘awe’some', sub: 'Boosting creativity through awe', tags: 'Service design', year: '', img: b('55d6f66d187fed46b2582a83e1765052'), bg: '#4d6369', fit: 'cover', pos: 'center top',
+        meta: [['Collaborator', 'Master studies project with external company'], ['Type', 'Service design'], ['Technologies', 'Figma, Miro, Illustrator'], ['Methods & Tools', 'Desktop research, workshop facilitation, user journey, service blueprint, service origami, subtext, stakeholder mapping, storyboard']],
+        intro: 'The project investigates how introducing awe in your everyday life can boost your creativity. The brief was given by an external company that wanted to foster an innovative culture in their workplace by implementing the 20% rule. Our service introduces a set of tools that utilize awe to boost the creativity of the employees.',
+        sections: [
+          sec('', '', [fl('b95e03c12d05b219ef31f6bf18a4e2f5', 'Design process', '#ffffff')]),
+          sec('', '', [fl('022a43dbfa9b0a00d8038311979ec5a2', 'Creativity, innovation, social behaviour and broadening horizons', '#ffffff')], { layout: 'split', quote: 'Awe is the feeling we get in the presence of something vast that challenges our understanding of the world (Keltner, 2023)' }),
+          sec('Defining project scope and problem area', '', [ph('c8423056c7aa41694f03545a89ec2036', 'Affinity mapping')], { layout: 'split', quote: '“HMW design a service that leverages awe to enable creativity in support of the 20% model for employees?”' }),
+          sec('Investigating awe and developing service concept', 'Through a co-creation workshop, we investigated the connection between creativity and awe, uncovering underlying needs and values. Our aim was to explore diverse awe experiences and their triggers, and the participants’ mental state before, during and after their awe experiences.', [ph('7bd84190b2fe9ab6b06888d779f29407', 'Co-creation workshop'), fl('3a8946a57275b6c7fbbc122b2a1a04d0', 'Workshop material', '#dff2fb'), fl('55900fb4eae1a6cb0211d3c1c1de8c8b', 'User journey and service blueprint', '#dff2fb')]),
+          sec('Prototyping service concept', 'Through service origami and subtext we prototyped the service concept.', [ph('a2117bc16d8acbd614fdebf3ec205b8b', 'Service origami'), fl('607cfe32653ad77e9f34d363ab05b99c', 'Subtext', '#dff2fb')]),
+          sec('Communication service concept', 'Visualizing the concept and implementation of the platform.', [fl('55d6f66d187fed46b2582a83e1765052', 'Storyboard', '#4d6369'), fl('44191c121f7968be0a85485090a76d83', 'Storyboard', '#4d6369')])
+        ] },
+      { id: 'camp', title: 'New campaign experiment', short: 'New campaign experiment', sub: 'User interface addition to Plateau Agency’s website', tags: 'UI design', year: '2021', img: b('e4a658e42056248452467da47e441309'), bg: '#fbd8a0', fit: 'cover', pos: 'center',
+        meta: [['Collaborator', 'Plateau Agency'], ['Type', 'UI design'], ['Technologies', 'Figma, Illustrator'], ['Methods & Tools', 'Semi-structured interviews, prototyping']],
+        intro: 'During my internship, I worked on the development of a new article site and a campaign page for Plateau Agency. Their goal was to boost article production and revamp campaign creation to incorporate articles and guides seamlessly. The layout required simplicity to enable team members to upload content independently, eliminating the need to search for matching visuals. As part of this, I crafted a series of graphic backgrounds, drawing inspiration from the brand’s font.',
+        sections: [
+          sec('Site structure', 'Semi-structured interviews with the team showed how they work with content. Based on that I mapped how the article archive, the campaign page and gated content connect to the main website.', [fl('60a5b2869e350f13c22f9a3389b5a6ac', 'Site structure', '#111111')], { layout: 'split' }),
+          sec('Campaign page and articles', '', [fl('1655fb4ae8a090a574c6838aefb95cf0', 'Campaign page', '#f6efe6'), ui('a798466b4e9076364b442d138a3e4155', 'Article archive', '#f6efe6')]),
+          sec('Graphic backgrounds', 'A series of graphic backgrounds inspired by the brand’s font, so every article gets a fitting visual without extra work.', [fl('f5c00286a67d29eea1197bb02c2b3857', 'Background series', '#ffffff'), fl('73b69ce1044108302aba716177cf2f0f', 'Backgrounds in use', '#f6efe6')]),
+          sec('', '', [ph('6e4786a003deb8fb8a35e29051f7cec1', 'The campaign page on a laptop')])
+        ] },
+      { id: 'cyr', title: 'The Cyrillic alphabet in motion', short: 'Cyrillic in motion', sub: 'Exploring typography through animation', tags: 'Animation', year: '', img: b('833146a8fb8d6cd64d62a1c266d70a74'), bg: '#4b5f64', fit: 'contain', pos: 'center',
+        meta: [['Collaborator', 'Personal project'], ['Type', 'Animation'], ['Technologies', 'After Effects, Illustrator'], ['Methods & Tools', 'Sketching, storyboard']],
+        intro: 'While practicing my animation skills and exploring my interest in typography, I decided to take on a new challenge: creating an animation inspired by the Cyrillic alphabet. It was an exciting opportunity to combine my passion for both animation and typography. It was a chance to explore and be creative, but also celebrate the beauty of Cyrillic script.',
+        sections: [] }
+    ];
+    const TLDR = {
+      aeldre: ['Digital platforms rarely design for the transition from working life to retirement.', 'Qualitative interviews, two co-design workshops and three rounds of iterative prototyping with members.', 'DiBU 2.0: a high-fidelity concept with a nine-step personalisation flow and a personalised member universe.'],
+      opiaid: ['There are no standardised guidelines for postoperative opioid dosing.', 'Fieldwork, cross-country interviews with anaesthesiologists and iterative Figma prototyping.', 'A web interface for an AI decision-support tool that supports, not replaces, clinical judgment.'],
+      onske: ['Link-based wishlists reduce gift-giving to a transaction.', 'Interaction criticism, a co-design workshop with four super-users, brainwriting and testing.', 'A redesigned wish flow without links and a Gift Generator based on shared interests.']
+    };
+    P.forEach((p) => { p.tldr = TLDR[p.id] || null; p.kind = ['aeldre', 'opiaid', 'onske'].includes(p.id) ? 'ux' : 'visual'; });
+    const THINGS = [
+      ['845900c64fae73fff5764683e626ecdf','Running shoes','A long run fixes most things'],
+      ['3c4f5d91769a326100dddf297156699c','Keyboard piano','I am currently learning to play the piano'],
+      ['6daf9a1a147029258252b1766201a0d2','Ball of clay','My place is full of ceramic I threw myself'],
+      ['79fa046bd5d49e7b6c9c55445c1bf6fa','Ruler','I can tell when something is 2px off'],
+      ['a54e6ca64e0ca71908ce55b5a1b8aa28','Bowl of pho','I could eat pho every day and never get bored'],
+      ['2dfc35f3517badab44b7eb80cb628ed6','Normal People by Sally Rooney','A tendency to disappear into fictional worlds'],
+      ['6d16da32d875268fc2d1d42ce1de9ce7','Cup of tea','Powered entirely by earl grey'],
+      ['a24ca272ceed5c2eb29435975608e2dc','Cow','I grew up on the countryside in Jylland but ended up in Copenhagen'],
+      ['946577b245430f2c858f830d9e65564c','Spotify logo','My playlist is mostly danish pop with some country on the side'],
+      ['015361137106439d3d38c3f4e5997aef','Pencil','Went to art school and never stopped drawing'],
+      ['e91ce387c7077e3fe30d3779bf84b2cc','Figma logo','I’m always discovering new things to learn in Figma'],
+      ['806126d341aa0c03fa7487b1f3f87efa','Sparkles','I incorporate AI tools in my work from Claude to Stitch'],
+      ['751de072de5d9c2ca52289a8745f7235','HTML code','Frontend is not a foreign language'],
+      ['d9028c973e66861b4da89299aa0bda15','World map','Curious about people, places and everything in between']
+    ];
+    const EXP = [['UX Researcher Intern', 'ChefMe', 'Apr. 2023'], ['Digital Design Intern', 'Plateau Agency', 'Autumn 2021'], ['Graphic Design & Teaching Assistant', 'Art School Horsens', 'Spring 2019'], ['Volunteer Teaching Assistant', 'Art School Horsens', '2014–2017']];
+    const EDU = [['MSc Digital Design and Interactive Technologies', 'IT University of Copenhagen', '2024–2026'], ['Courses, MSc Service Systems Design', 'Aalborg University Copenhagen', '2023–2024'], ['DR Lab for Young Digital Talents', 'DR', 'Aug. 2022'], ['BA Communication Design', 'Design School Kolding', '2019–2022'], ['Exchange', 'Kwame Nkrumah University, Ghana', '2020'], ['Graphic Design Course', 'Krabbesholm Højskole', 'Autumn 2018']];
+    const S = this.state;
+    const cur = P.find((p) => p.id === S.pid) || P[0];
+    const curIdx = P.indexOf(cur);
+    const nxt = P[(curIdx + 1) % P.length];
+    const fade = 'transition: opacity 0.25s ease;';
+    const heroImg = (p, h) => p.fit === 'contain'
+      ? 'position: absolute; left: 6%; top: 7%; width: 88%; height: 86%; object-fit: contain;'
+      : (p.fit === 'cover' ? 'position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: ' + p.pos + ';' : 'display: none;');
+    const go = {
+      index: () => { this.setState({ view: 'index', hovered: null }); try { window.scrollTo(0, 0); } catch (e) {} },
+      about: () => { this.setState({ view: 'about', hovered: null }); try { window.scrollTo(0, 0); } catch (e) {} },
+      open: (id) => () => { this.setState({ view: 'project', pid: id, hovered: null }); try { window.scrollTo(0, 0); } catch (e) {} }
+    };
+    const things = THINGS.map(([id, alt, text], i) => ({
+      img: '/_blob/' + id, alt, text,
+      imgStyle: 'position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; ' + fade + (S.hoveredThing === i ? ' opacity: 0;' : ' opacity: 1;'),
+      textStyle: 'position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box; text-align: center; font-size: 14px; line-height: 1.35; color: #4a4a4a; ' + fade + (S.hoveredThing === i ? ' opacity: 1;' : ' opacity: 0;'),
+      enter: () => this.setState({ hoveredThing: i }),
+      leave: () => this.setState({ hoveredThing: null })
+    }));
+    const cvRow = ([a, b, c]) => ({ a, b, c });
+    const common = {
+      isIndex: S.view === 'index', isProject: S.view === 'project', isAbout: S.view === 'about',
+      goIndex: go.index, goAbout: go.about,
+      navIndexStyle: S.view === 'about' ? 'opacity: 0.4;' : 'opacity: 1;',
+      navAboutStyle: S.view === 'about' ? 'opacity: 1;' : 'opacity: 0.4;',
+      things, exp: EXP.map(cvRow), edu: EDU.map(cvRow),
+      cur: { ...cur, meta: cur.meta.map(([k, v]) => ({ k, v })), sections: cur.sections.map((x, k) => { const n = x.imgs.length; const split = x.layout === 'split' && ALLOW_SPLIT; const textFirst = k % 2 === 0; const H = n === 1 ? 640 : n === 2 ? 460 : 340;
+        const imgs = x.imgs.map((y) => { const o = typeof y === 'string' ? { label: y } : y; const pad = o.fit === 'panel' ? ' padding: 6%; object-fit: contain;' : (o.fit === 'contain' ? ' padding: 16px; object-fit: contain;' : ' object-fit: cover;');
+          return { label: o.label, src: o.src || '', hasSrc: !!o.src, noSrc: !o.src,
+            imgStyle: 'display: block; width: 100%; box-sizing: border-box; border-radius: 10px; background: ' + (o.bg || '#e9e9e9') + ';' + pad + (split ? ' height: auto; max-height: 720px;' : ' height: ' + H + 'px;'),
+            style: 'height: ' + (split ? 420 : H) + 'px; border-radius: 10px; background: #e9e9e9; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box; text-align: center; color: #6b6b6b;' }; });
+        return { h: x.h, t: x.t, hasH: !!x.h, hasT: !!x.t, hasQuote: !!x.quote, quote: x.quote, hasImgs: n > 0, imgs, hasCards: x.cards.length > 0, cards: x.cards.map(([t, d]) => ({ t, d })),
+          wrapStyle: split ? 'display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: center; padding: 56px 6px 0;' : 'display: flex; flex-direction: column; gap: 20px; padding: 56px 6px 0;',
+          textStyle: 'display: flex; flex-direction: column; gap: 14px; max-width: 720px;' + (split ? ' order: ' + (textFirst ? 1 : 2) + ';' : ''),
+          mediaStyle: split ? 'display: flex; flex-direction: column; gap: 8px; min-width: 0; order: ' + (textFirst ? 2 : 1) + ';' : 'display: grid; grid-template-columns: repeat(' + Math.min(Math.max(n, 1), 3) + ', minmax(0, 1fr)); gap: 8px;',
+          showText: !!(x.h || x.t || x.quote) }; }), hasImg: cur.img !== '', noImg: cur.img === '', hasSections: cur.sections.length > 0, hasTldr: !!cur.tldr, tldr: cur.tldr ? [['Problem', cur.tldr[0]], ['Approach', cur.tldr[1]], ['Outcome', cur.tldr[2]]].map(([k, v]) => ({ k, v })) : [] },
+      nxt: { ...nxt, go: go.open(nxt.id) }
+    };
+    const h = S.hovered;
+    if (!this.arMap) this.arMap = {};
+    const AR = this.arMap;
+    const setAr = (src) => (e) => { const t = e && e.target; if (!t || !t.naturalWidth) return; const r = t.naturalWidth / t.naturalHeight; if (AR[src] && Math.abs(AR[src] - r) < 0.001) return; AR[src] = r; this.setState({ arTick: (this.state.arTick || 0) + 1 }); };
+    const scrollTo = (id) => () => { const go2 = () => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }; if (S.view !== 'index') { this.setState({ view: 'index' }); setTimeout(go2, 60); } else go2(); };
+    const imx = (id, label, o) => ({ src: id ? '/_blob/' + id : '', label, ...(o || {}) });
+    const phx = (label) => ({ src: '', label });
+    // Figma case pages, as designed
+    const FIG = {
+      aeldre: { title: 'Ældre Sagen’s Digital Member Universe', blocks: [
+        { type: 'panel', bg: '#b5dafb', imgs: [imx('c6ca765ae149e0bb37dfe6fe55d45eaf', 'Min side', { shadow: true, scroll: '16 / 10' })] },
+        { type: 'row', side: 'left', bg: '#b5dafb', h: 'The Personalisation Flow', t: 'The personalisation flow is designed as an invitation where members choose how much they share across nine skippable steps. The platform then balances that input with system-driven recommendations based on life stage and behaviour.', imgs: [imx('d6fe39a53d01bbcc89ecaa4014760c27', 'The nine personalisation steps', { video: 'media/1263ae2b35c00bf757588752d1575c3f.mp4' })] },
+        { type: 'row', side: 'right', inline: true, h: 'Activities & Benefits', t: 'Content is tagged to show whether a recommendation is based on personal interests or local popularity, keeping the experience transparent. A map view allows members to explore activities by location, and filters for date and type make the offering easy to navigate without narrowing it down completely.', imgs: [imx('78b9bac9df5c2e68c87a234901ef91f0', 'Offers and activities', { shadow: true, scroll: '5 / 8', still: true }), imx('07da51131efdbc332ffb694aaf13727f', 'Activity page', { shadow: true, scroll: '5 / 8', still: true })] },
+        { type: 'row', side: 'right', h: 'Co-Creation Workshops', t: 'Two co-design workshops placed participants as active contributors rather than informants, surfacing needs and tensions that interviews alone would not have reached. Their language, priorities, and contradictions directly shaped the design decisions made throughout the process.', textImgs: [imx('a1dceb5170c51a794893a60515337e8b', 'Collage from the workshop')], imgs: [imx('2ff491d51884fcec9a3d9da5fbe0cfb7', 'Collage workshop')] },
+        { type: 'row', side: 'left', h: 'Personalised Retirement Guidance', t: 'The knowledge and guidance section gives members access to structured information on economy, housing, healthcare, and everyday life. The content is designed to be relevant to where the member is in their transition, not a generic overview of what retirement might eventually involve.', imgs: [imx('3ccce00fbee3bcf8100182a5f854ab43', 'Knowledge and guidance')] },
+        { type: 'text', h: 'My Profile', t: 'Members can view and adjust their personalisation data at any time, seeing what the platform knows about them and updating it as their situation changes. This transparency gives members direct control over how the platform adapts to them.' },
+        { type: 'panel', bg: '#b5dafb', imgs: [imx('c8a50684f42c3cb82af4e9dbc8c1a6aa', 'My profile', { shadow: true, scroll: '16 / 10' })] },
+        { type: 'panel', bg: '#ffffff', flush: true, imgs: [imx('9bce70a9d8f2935c8eaf4f280e2f8fa3', 'DiBU 2.0 screens')] }
+      ] },
+      opiaid: { title: 'OPI-AID', blocks: [
+        { type: 'panel', bg: '#6bb5b3', imgs: [imx('51c128719bc6bdefe2ecec8115748e23', 'New assessment', { shadow: true, video: 'media/40cb34c5b21b51969fbfd830e638f6dd.mp4' })] },
+        { type: 'row', side: 'right', h: 'New Assessment', t: 'New Assessment is the core of OPIAID. Clinicians enter 15–20 patient predictors and receive a recommended dose, predicted pain levels, and potential side effects. Inputs can be added through text, voice, files, or photos. Clinicians can adjust the recommendation or choose an alternative medication, with the system asking for a brief justification.', imgs: [imx('b071f0177eda2912a8ff088b2e985970', 'Process')] },
+        { type: 'text', h: 'Different Workflows And Needs', t: 'The interviews revealed both shared challenges and country-specific needs. Germany inspired an AI-assisted photo input, while the UK highlighted the need for standardisation. Sweden emphasised multimodal pain management and post-operative feedback. Across all countries, clinicians wanted AI to support and not replace their professional judgment.' },
+        { type: 'tabs', label: 'User journey', tabs: [['Danish', 'dcfa916f878924ec6b41494d31123cee'], ['English', '2f1f79288259e707ffa2820e5503ab34'], ['German', '7911b6288c851ce9a54d71d575db01e2'], ['Swedish', 'c6adfd0e61471260e70c154218719a66']] },
+        { type: 'text', h: 'Your History Page', t: 'The Your History page gives each healthcare professional a personal log of all previous assessments. It shows which predictors were used, what dose was recommended and what was ultimately administered, and whether post-operative feedback has been added. The page is designed to support reflection and learning over time, allowing clinicians to evaluate their own decisions and track patterns across patients.' },
+        { type: 'panel', bg: '#6bb5b3', imgs: [imx('9ca77ba8f064eb5a7179bc22331a40a0', 'Your History', { shadow: true, video: 'media/7a22de7e437ae7441d61200a86e19c10.mp4' })] },
+        { type: 'text', h: 'Feature Highlights', t: '' },
+        { type: 'cards', from: 'opiaid' }
+      ] },
+      onske: { title: 'Ønskeskyen redesign', blocks: [
+        { type: 'panel', bg: '#cfe5fb', imgs: [imx('587ecdea558e7fde54b1a4270e316773', 'Create a wish', { shadow: true, video: 'media/b0ea66f93ba308d816606e518b5d4016.mp4' })] },
+        { type: 'text', h: 'Create A Wish', t: 'Ønskeskyen’s existing wish creation heavily prioritises product links, making wishlists feel like order forms. The redesign makes it easy and attractive to wish for things without links, prompting the user to choose between material and experiential categories and indicate whether second-hand is welcome. An AI-generated image feature visualises wishes that cannot be bought online, opening the space for gifts that are harder to define but more meaningful to receive.' },
+        { type: 'text', h: 'Co-Creation Workshop', t: 'A two-hour co-design workshop with four super-users placed participants as co-experts, using five activities to surface how they actually experience gift-giving and what feels meaningful to them.' },
+        { type: 'photos', imgs: [imx('c939562cf981581f9feef1bc940facec', 'Workshop'), imx('f19ccb4bb4aa34e08ad5972c019a987a', 'The Great Gift Game'), imx('5bd8c1d49211a769e2dff6c4cd590c1f', 'Scenario card')] },
+        { type: 'text', h: 'Gift Generator', t: 'The Gift Generator replaces advertising with relevance. By drawing on the shared interest tags of both giver and receiver, it generates personalised gift suggestions rooted in the relationship between them rather than commercial logic. It also offers inspiration for making a gift more personal or sustainable, adding a layer of thoughtfulness to the process.' },
+        { type: 'panel', bg: '#cfe5fb', imgs: [imx('a7339409a4718923d000cd7927fb9e2b', 'Gift Generator', { shadow: true, video: 'media/24ae0f043c0cfd4eb6f7f7dc5cee9e9e.mp4' })] }
+      ] }
+    };
+    // visual projects: build blocks from the shared data
+    const fromData = (p) => { const out = []; if (p.img) out.push({ type: 'panel', bg: p.bg, flush: p.fit === 'cover', imgs: [{ src: p.img, label: p.title }] });
+      let k = 0; p.sections.forEach((x) => { const imgs = x.imgs.map((y) => typeof y === 'string' ? phx(y) : { src: y.src, label: y.label, bg: y.fit === 'cover' ? '' : y.bg });
+        if (x.cards.length) { if (x.h) out.push({ type: 'text', h: x.h, t: x.t }); out.push({ type: 'cards', list: x.cards }); return; }
+        if (x.layout === 'split' && imgs.length) { out.push({ type: 'row', side: (k++ % 2 === 0) ? 'right' : 'left', h: x.h, t: x.t, quote: x.quote, imgs }); return; }
+        if (x.h || x.t || x.quote) out.push({ type: 'text', h: x.h, t: x.t, quote: x.quote });
+        if (imgs.length) out.push({ type: 'photos', imgs }); });
+      return out; };
+    const fig = FIG[cur.id];
+    const raw = fig ? fig.blocks : fromData(cur);
+    const imgItem = (o, ctx) => { const r = AR[o.src] || 1.4;
+      return { label: o.label, src: o.src, hasSrc: !!o.src, noSrc: !o.src, onLoad: setAr(o.src),
+        isVid: !!o.video, isPic: !o.video, vsrc: o.video || '',
+        wrap: (ctx === 'photo' ? (o.scroll ? 'flex: 1 1 0; min-width: 0;' : 'flex: ' + r + ' 1 0; min-width: 0;') : 'width: 100%;') + (o.bg ? ' background: ' + o.bg + '; padding: 20px; box-sizing: border-box; border-radius: 6px;' : ''),
+        style: 'display: block; width: 100%; height: auto;' + (o.scroll ? ' aspect-ratio: ' + o.scroll + '; object-fit: cover; object-position: 50% 0%;' + (o.still ? '' : ' animation: pfScroll ' + (o.dur || 24) + 's ease-in-out infinite alternate;') : '') + (o.shadow ? ' border-radius: 12px; box-shadow: 0 10px 40px rgba(28,36,48,0.14);' : ' border-radius: 6px;'),
+        phStyle: (ctx === 'photo' ? 'flex: 1 1 0;' : 'width: 100%;') + ' height: 360px; border-radius: 6px; background: #e9e9e9; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box; text-align: center; color: #4a5568;' }; };
+    const cardsOf = (b) => (b.list || (P.find((p) => p.id === b.from).sections.find((s) => s.cards.length) || { cards: [] }).cards).map(([t, d]) => ({ t, d }));
+    const blocks = raw.map((b) => { const base = { isPanel: b.type === 'panel', isRow: b.type === 'row', isText: b.type === 'text', isPhotos: b.type === 'photos', isCards: b.type === 'cards',
+        h: b.h || '', t: b.t || '', quote: b.quote || '', hasH: !!b.h, hasT: !!b.t, hasQuote: !!b.quote };
+      if (b.type === 'panel') return { ...base, imgs: b.imgs.map((o) => imgItem(o, 'panel')), boxStyle: 'margin-top: 56px; border-radius: 6px; overflow: hidden; background: ' + b.bg + ';' + (b.flush ? '' : ' padding: 7% 9%; display: flex; justify-content: center;') };
+      if (b.type === 'row') { const textFirst = b.side !== 'left';
+        return { ...base, imgs: b.imgs.map((o) => imgItem(o, b.inline ? 'photo' : 'col')), textImgs: (b.textImgs || []).map((o) => imgItem(o, 'col')),
+          textCol: 'display: flex; flex-direction: column; gap: 14px; order: ' + (textFirst ? 1 : 2) + ';',
+          mediaCol: 'display: flex; ' + (b.inline ? 'flex-direction: row; align-items: flex-start;' : 'flex-direction: column;') + ' gap: 12px; min-width: 0; order: ' + (textFirst ? 2 : 1) + ';' + (b.bg ? ' background: ' + b.bg + '; padding: 8%; border-radius: 6px;' : '') }; }
+      if (b.type === 'photos') { const rows = []; for (let i = 0; i < b.imgs.length; i += 3) rows.push({ imgs: b.imgs.slice(i, i + 3).map((o) => imgItem(o, 'photo')) }); return { ...base, rows }; }
+      if (b.type === 'cards') return { ...base, cards: cardsOf(b) };
+      if (b.type === 'tabs') { const cur2 = this.state.ujTab || b.tabs[0][0]; const hit = b.tabs.find((x) => x[0] === cur2) || b.tabs[0];
+        return { ...base, isTabs: true, tabLabel: b.label, tabSrc: '/_blob/' + hit[1], tabAlt: b.label + ', ' + hit[0],
+          tabs: b.tabs.map(([lab]) => ({ label: lab, sel: lab === hit[0] ? 'true' : 'false', pick: () => this.setState({ ujTab: lab }),
+            style: 'padding: 9px 26px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; background: #ffffff; cursor: pointer; transition: border-color 0.2s ease, color 0.2s ease; ' + (lab === hit[0] ? 'border: 1px solid #1c2430; color: #1c2430;' : 'border: 1px solid #d5d8dd; color: #6b7280;') })) }; }
+      return base; });
+
+    const fi = (id, label, w) => ({ src: id ? '/_blob/' + id : '', label, w: w || 100 });
+    const FR = {
+      awe: [
+        { type: 'img', imgs: [fi('b95e03c12d05b219ef31f6bf18a4e2f5', 'Design process', 88)] },
+        { type: 'quote', t: 'Awe is the feeling we get in the presence of something vast that challenges our understanding of the world (Keltner, 2023)' },
+        { type: 'img', imgs: [fi('022a43dbfa9b0a00d8038311979ec5a2', 'Creativity, innovation, social behaviour and broadening horizons', 64)] },
+        { type: 'text', h: 'Defining project scope and problem area', t: '', align: 'right' },
+        { type: 'pair', imgs: [fi('c8423056c7aa41694f03545a89ec2036', 'Affinity mapping')], card: '“HMW design a service that leverages awe to enable creativity in support of the 20% model for employees?”' },
+        { type: 'side', h: 'Investigating awe and developing service concept', t: 'Through a co-creation workshop, we investigated the connection between creativity and awe, uncovering underlying needs and values. Our aim was to explore diverse awe experiences and their triggers, and the participants’ mental state before, during and after their awe experiences.', imgs: [fi('7bd84190b2fe9ab6b06888d779f29407', 'Co-creation workshop')], w: 40 },
+        { type: 'img', imgs: [fi('3a8946a57275b6c7fbbc122b2a1a04d0', 'Workshop material', 76)] },
+        { type: 'img', imgs: [fi('55900fb4eae1a6cb0211d3c1c1de8c8b', 'User journey and service blueprint')] },
+        { type: 'text', h: 'Prototyping Service Concept', t: 'Through service origami and subtext we prototyped the service concept.' },
+        { type: 'pair', imgs: [fi('a2117bc16d8acbd614fdebf3ec205b8b', 'Service origami'), fi('607cfe32653ad77e9f34d363ab05b99c', 'Subtext')] },
+        { type: 'text', h: 'Communication service concept', t: 'Visualizing the concept and implementation of the platform.', align: 'right' },
+        { type: 'img', imgs: [fi('55d6f66d187fed46b2582a83e1765052', 'Storyboard', 64)] },
+        { type: 'img', imgs: [fi('44191c121f7968be0a85485090a76d83', 'Storyboard', 64)], align: 'right' }
+      ],
+      art: [
+        { type: 'pair', imgs: [fi('ebcd36cd86043f7b2013c2f8911ee6ff', 'The guide book'), fi('a319bf36622538af1b2fd03a9bda7196', 'In the museum')] },
+        { type: 'steps', steps: [
+          ['Segment Groups', 'The museum presented us with 4 segment groups from which we chose to focus on a specific group called the “affirmers”. This segment consists of individuals with limited experience in experiencing art but who wish to expand their cultural horizons.'],
+          ['User Research', 'We studied two exhibitions, “Samlingen – 250 years of Danish art” and Kathrine Ærtebjerg’s “De tusind gåders sted”, through interviews, surveys and a conversation with a museum curator.'],
+          ['Exhibition Experience', 'Through a service safari we experienced the exhibitions as the segment group would, to understand where the experience falls short without prior knowledge.'],
+          ['Analysing Insights', 'We mapped the user journey through the collection. The analysis showed that the affirmers are unsure of their own abilities, are looking for the “right” answers, and focus on how the museum communicates the art.'],
+          ['Prototype & Test', 'We prototyped a guide book that leads visitors through the exhibition with open questions, and tested it in the museum.']] },
+        { type: 'img', imgs: [fi('6e8621b78c5a1420958e20a34a94f3c6', 'The four segment groups', 76)] },
+        { type: 'pair', imgs: [fi('0f81c20cbded8ac84f80e37ad1a04394', 'User journey through the collection'), fi('8f0b281ecd3bd24ee7e8b52e1ac40767', 'Partial conclusion')] },
+        { type: 'side', h: 'The guide book', t: 'A structured guide that leads visitors through the exhibition, fostering both personal exploration and group discussion.', imgs: [fi('360fff04c7c1abc86102fee6503fb257', 'Guide book mock-up')], w: 50, imgRight: true },
+        { type: 'pair', imgs: [fi('0608123a988f4b9727a9850d09eb03bb', 'Guide book in the collection'), fi('0818b0f6b048042d9aef17056e8a6370', 'Guide book in the collection')] },
+        { type: 'pair', imgs: [fi('dcff4aff7432ef26a7b79dca24908f0f', 'Guide book in the collection'), fi('40fb8557134b196cd7fcfce1f7e98238', 'Guide book in the collection')] }
+      ],
+      bach: [
+        { type: 'side', h: 'A visual identity for SoMe', t: 'I developed BachMouritsen’s current visual identity to align with SoMe platforms and created the posts for the campaign.', imgs: [fi('b19958529f40bccae6a1b755960cc8ca', 'The campaign on Instagram')], w: 55 },
+        { type: 'img', imgs: [fi('e6544d121ad77dcd43646ba0cd39221f', 'SoMe posts')] },
+        { type: 'side', h: 'Animation', t: 'Animated posts for the Variété collection.', imgs: [fi('700486367ba8aaa588be601f3acc0f10', 'Variété animation')], w: 50, imgRight: true },
+        { type: 'pair', imgs: [fi('0d75178846735c75faae4c7c61176c0f', 'Variété'), fi('0a59e6c43c0ab70513eb55858085bb1f', 'Art and storytelling'), fi('964dd6e57864b63b9b22dc8877e01a97', 'Behind the typography')] },
+        { type: 'text', h: 'The Chepré film', t: 'I assisted in filming, then edited the film and created the animations for the Chepré collection.' },
+        { type: 'video', src: 'media/e6466d1e3ae9b4f4a8c4aaf1ec48e4f1.mp4', poster: 'assets/4da70a10e9fa4a044e6a6286761a6c6d.jpg', label: 'The Chepré collection film', w: 100 }
+      ],
+      camp: [
+        { type: 'img', imgs: [fi('e4a658e42056248452467da47e441309', 'Campaign and article pages')] },
+        { type: 'text', h: 'A layout the team can fill themselves', t: 'The layout needed to be simple, so team members can upload articles and guides independently without searching for matching visuals.' },
+        { type: 'img', imgs: [fi('6e4786a003deb8fb8a35e29051f7cec1', 'The campaign page on a laptop', 88)] },
+        { type: 'side', h: 'Graphic backgrounds', t: 'A series of graphic backgrounds drawing inspiration from the brand’s font.', imgs: [fi('f5c00286a67d29eea1197bb02c2b3857', 'Graphic background series')], w: 55 },
+        { type: 'pair', imgs: [fi('3623dbd77256a9fb91037e88d1f96e9d', 'Background animation'), fi('73b69ce1044108302aba716177cf2f0f', 'Backgrounds in use')] }
+      ],
+      cyr: [
+        { type: 'video', src: 'media/3b32527d029b9e633a030259ab86b504.mp4', poster: 'assets/4b301ad2235a91c7e9049cb47d517b3b.jpg', label: 'Short version (loop)', w: 76, loop: true },
+        { type: 'img', imgs: [fi('833146a8fb8d6cd64d62a1c266d70a74', 'The Cyrillic alphabet in motion', 48)] }
+      ]
+    };
+    const FR_INTRO = {
+      bach: 'BachMouritsen, a luxury jeweler and diamond company, sought a SoMe campaign to promote their latest jewelry collections, Chepré and Variété, inspired by art. My responsibilities involved developing their current visual identity to align with SoMe platforms, creating SoMe posts, filming assistant, editing, and creating animations for the video for the collection Chepré. This project was done during my internship at Plateau Agency.'
+    };
+    const FW = 1221; const pct = (w) => (w / FW * 100).toFixed(3) + '%';
+    const VM = (id, extra) => 'https://player.vimeo.com/video/' + id + '?muted=1&autoplay=1&autopause=0&controls=0&loop=1&background=1' + (extra || '');
+    const I = (id, w, h, o) => ({ k: 'img', src: '/_blob/' + id, w, h, ...(o || {}) });
+    const V = (id, poster, w, h, o) => ({ k: 'vid', src: '/_blob/' + id, poster: poster ? '/_blob/' + poster : '', w, h, ...(o || {}) });
+    const T = (w, parts, o) => ({ k: 'text', w, parts, ...(o || {}) });
+    const R = (items, o) => ({ items, ...(o || {}) });
+    const FR2 = {
+      awe: [
+        R([I('b95e03c12d05b219ef31f6bf18a4e2f5', 778, 234, { label: 'Design process', cap: 'Our design process, structured as a double diamond.', fit: 'contain', radius: 0 })], { justify: 'center', mt: 60 }),
+        R([{ k: 'quote', w: 1221, h: 498, src: 'assets/850519dfc43a3db6712233569b91a57c.jpg', label: 'Mountain ridge in the clouds', t: 'Awe is the feeling we get in the presence of something vast that challenges our understanding of the world (Keltner, 2023)' }], { mt: 90 }),
+        R([T(596, [{ h: 'Researching awe', t: 'Through desk research we explored what awe does to us. Studies point to effects that matter in a workplace: awe makes us more imaginative and innovative, it can be experienced together in a group, and it makes us more open to new perspectives.' }])], { mt: 90 }),
+        R([I('022a43dbfa9b0a00d8038311979ec5a2', 903, 372, { label: 'Creativity, innovation, social behaviour and broadening horizons', cap: 'Four effects of awe: creativity, innovation, social behaviour and broadening horizons.', fit: 'contain', radius: 0 })], { mt: 40 }),
+        R([T(780, [{ h: 'Defining project scope and problem area', t: 'We clustered our findings in an affinity map. The patterns showed where awe and creativity meet the company’s wish for an innovative culture, and led to our how-might-we question.', narrow: 575 }], { end: true })], { justify: 'flex-end', mt: 90 }),
+        R([I('c8423056c7aa41694f03545a89ec2036', 591, 376, { label: 'Affinity mapping', cap: 'Affinity mapping of our research findings.' }), T(415, [{ t: '“HMW design a service that leverages awe to enable creativity in support of the 20% model for employees?”', big: true }])], { justify: 'space-between', align: 'center', mt: 40 }),
+        R([T(596, [{ h: 'Investigating awe and developing service concept', t: 'Through a co-creation workshop, we investigated the connection between creativity and awe, uncovering underlying needs and values. Our aim was to explore diverse awe experiences and their triggers, and the participants’ mental state before, during and after their awe experiences.' }])], { mt: 90 }),
+        R([I('7bd84190b2fe9ab6b06888d779f29407', 591, 375, { label: 'Co-creation workshop', cap: 'The co-creation workshop.' }), I('3a8946a57275b6c7fbbc122b2a1a04d0', 591, 375, { label: 'Workshop material', cap: 'Participants explored their own awe experiences with images and prompts.' })], { justify: 'space-between', mt: 40 }),
+        R([I('55900fb4eae1a6cb0211d3c1c1de8c8b', 807, 669, { label: 'User journey and service blueprint', cap: 'User journey and service blueprint for the service concept.', fit: 'contain', radius: 0 })], { justify: 'flex-end', mt: 85 }),
+        R([T(780, [{ h: 'Prototyping Service Concept', t: 'Through service origami and subtext we prototyped the service concept.' }])], { mt: 85 }),
+        R([I('a2117bc16d8acbd614fdebf3ec205b8b', 591, 433, { label: 'Service origami', cap: 'Service origami: acting out the service with paper models.' }), I('607cfe32653ad77e9f34d363ab05b99c', 591, 433, { label: 'Subtext', cap: 'Subtext: prototyping what users think and say at each touchpoint.' })], { justify: 'space-between', mt: 40 }),
+        R([T(780, [{ h: 'Communication service concept', t: 'Visualizing the concept and implementation of the platform.', narrow: 575 }], { end: true })], { justify: 'flex-end', mt: 85 }),
+        R([I('55d6f66d187fed46b2582a83e1765052', 575, 483, { label: 'Storyboard', cap: 'Storyboard of the service concept.', fit: 'contain', radius: 0 }), I('44191c121f7968be0a85485090a76d83', 583, 476, { label: 'Storyboard', cap: 'Storyboard of the service concept.', fit: 'contain', radius: 0 })], { justify: 'space-between', mt: 40 })
+      ],
+      art: [
+        R([I('ebcd36cd86043f7b2013c2f8911ee6ff', 580, 500, { label: 'The guide book', cap: 'The guide book for the collection.', inset: [423, 372], bg: '#edfaff' }), V('e0446d178bd06debb3eec0f24fa7c7f8', 'f80f21b61650d6c387fef7fee333a0eb', 624, 495, { label: 'In the museum', cap: 'Kunstmuseum Brandts, Odense.' })], { justify: 'space-between', mt: 60 }),
+        R([T(780, [{ h: 'About the project', t: 'This was my BA project in Communication Design at Design School Kolding in 2022, made together with Ottilia Oppermann. Our problem statement: how do we create a frame that supports the affirmers in experiencing art on their own at Kunstmuseum Brandts – with a focus on sensing and interaction, and without disturbing other visitors?' }])], { mt: 90 }),
+        R([{ k: 'hsteps', w: 1221, steps: [
+          ['Segment Groups', 'The museum presented us with 4 segment groups from which we chose to focus on a specific group called the “affirmers”. This segment consists of individuals with limited experience in experiencing art but who wish to expand their cultural horizons.', 'ff6cd613ee463fd28c4817d8a5c697b2', 'The four segment groups'],
+          ['User Research & Exhibition Experience', 'We studied two exhibitions, “Samlingen – 250 years of Danish art” and Kathrine Ærtebjerg’s “De tusind gåders sted”, through interviews, surveys and a conversation with a museum curator. Through a service safari we experienced the exhibitions as the segment group would, to understand where the experience falls short without prior knowledge.', '83fae54a69fb8aacb991bfd1527490d7', 'Experience, angle of entry and challenges'],
+          ['Analysing Insights', 'We mapped the user journey through the collection. The analysis showed that the affirmers are unsure of their own abilities, are looking for the “right” answers, and focus on how the museum communicates the art.', 'd4dd0a3348f0ba373d4b339c0a7c9e5e', 'User journey through the collection'],
+          ['Prototype & Test', 'We prototyped a guide book that leads visitors through the exhibition with open questions, and tested it in the museum.', '73561e990d0e9e7ee36acb26d69c166b', 'The guide book prototype']] }], { mt: 90 }),
+        R([T(780, [{ h: 'What we found', t: 'The art-historical entry point of the exhibitions gives the affirmers safety and adds to their cultural knowledge. But it presents one truth: visitors read the text before looking at the work, and there is little room for interaction, sensing or conversation. The guide book instead asks open questions that invite visitors to look, feel and form their own opinion.' }])], { mt: 90 }),
+        R([I('360fff04c7c1abc86102fee6503fb257', 580, 500, { label: 'Guide book mock-up', cap: 'The guide book is bound as a ring binder.' }), I('fc4b743ee5311091f70331800da29785', 580, 500, { label: 'The guide book in use', cap: 'The cover for “Samlingen – 250 års dansk kunst”.', kb: true })], { justify: 'space-between', mt: 90 }),
+        R([V('d24ba0d0a623e4a21bef252091f2edcb', '30a6c8432ade744370156d03e542e7d0', 1221, 688, { label: 'The guide book in the collection', cap: 'Testing the guide book in the collection.' })], { mt: 90 })
+      ],
+      bach: [
+        R([V('e6466d1e3ae9b4f4a8c4aaf1ec48e4f1', '4da70a10e9fa4a044e6a6286761a6c6d', 1221, 687, { label: 'The Chepré collection film', cap: 'The Chepré collection film. I assisted the filming, edited the film and created the animations.', controls: true, bg: '#000000', fit: 'contain' })], { mt: 60 }),
+        R([I('b19958529f40bccae6a1b755960cc8ca', 600, 610, { label: 'The campaign on Instagram', cap: 'The new SoMe posts on BachMouritsen’s Instagram.' }), I('700486367ba8aaa588be601f3acc0f10', 600, 669, { label: 'Variété animation', cap: 'Animated post for the Variété collection.' })], { justify: 'space-between', align: 'center', mt: 90 }),
+        R([T(780, [{ h: 'Series of posts', t: 'The posts were built as small series that tell the stories behind the jewellery: the stories that inspired the collections, art and storytelling, the story behind the typography, and investment diamonds. Each series follows the visual identity I adapted for SoMe.' }])], { mt: 90 }),
+        R([I('e6544d121ad77dcd43646ba0cd39221f', 1221, 597, { label: 'SoMe posts', cap: 'A selection of the SoMe posts.' })], { mt: 40 })
+      ],
+      camp: [
+        R([I('e4a658e42056248452467da47e441309', 1221, 800, { label: 'Campaign and article pages', cap: 'The new campaign page and article site.' })], { mt: 60 }),
+        R([T(780, [{ h: 'Simple enough to fill in yourself', t: 'Through semi-structured interviews with the team, I looked at how campaigns and articles were made. The layout had to be so simple that team members could upload articles and guides on their own, without having to find matching visuals.' }])], { mt: 90 }),
+        R([I('f5c00286a67d29eea1197bb02c2b3857', 591, 500, { label: 'Graphic background series', cap: 'A series of graphic backgrounds inspired by the brand’s font.', overlay: ['3623dbd77256a9fb91037e88d1f96e9d', 316, 247, 'Background animation'] }), I('6e4786a003deb8fb8a35e29051f7cec1', 591, 500, { label: 'The campaign page on a laptop', cap: 'The campaign page in use.' })], { justify: 'space-between', mt: 60 }),
+        R([V('e0cf3498c55d047eb9ed865d85792fad', '6e5850dc06a1a2bba50047146401330a', 895, 553, { label: 'Campaign UI animation', cap: 'The campaign UI in motion.' })], { justify: 'center', mt: 120 })
+      ],
+      cyr: [
+        R([T(780, [{ h: 'Process', t: 'I started by sketching the letterforms and planning the movement in a storyboard. The letters were then drawn in Illustrator and animated in After Effects.' }])], { mt: 60 }),
+        R([I('833146a8fb8d6cd64d62a1c266d70a74', 485, 541, { label: 'The Cyrillic alphabet in motion', cap: 'Letters from the Cyrillic alphabet in motion.' }), V('3b32527d029b9e633a030259ab86b504', '4b301ad2235a91c7e9049cb47d517b3b', 573, 394, { label: 'Short version (loop)', cap: 'Short version.' })], { justify: 'space-around', align: 'center', mt: 60 }),
+        R([I('1d574c9c0adb2e734a6f9fa12bd44c0f', 1219, 686, { label: 'The Cyrillic alphabet in motion — still from the full film', cap: 'Still from the full film.', kb: true })], { mt: 90 })
+      ]
+    };
+    const frRows = (FR2[cur.id] || []).map((r) => ({ style: 'display: flex; gap: 30px; margin-top: ' + (r.mt || 90) + 'px; justify-content: ' + (r.justify || 'flex-start') + '; align-items: ' + (r.align || 'flex-start') + ';',
+      items: r.items.map((it) => { const base = { cap: it.cap || '', hasCap: !!it.cap, label: it.label || '', src: it.src || '', poster: it.poster || '', t: it.t || '', isImg: it.k === 'img' || it.k === 'quote', imgCls: (it.k === 'quote' || it.kb) ? 'fr-kb' : '', isVid: it.k === 'vid', isFrame: it.k === 'frame', isQuote: it.k === 'quote', isText: it.k === 'text', loop: it.k === 'vid' && !it.controls, controls: !!it.controls, hasOverlay: !!it.overlay };
+        const rad = it.radius === 0 ? 0 : 24;
+        if (it.k === 'hsteps') { const cur3 = this.state.artStep || 0;
+          return { ...base, isHSteps: true, outer: 'flex: 1 1 100%; min-width: 0;', box: 'width: 100%;',
+            steps: it.steps.map(([h, t], n) => ({ n: String(n + 1).padStart(2, '0'), h, t, sel: n === cur3 ? 'true' : 'false', pick: () => this.setState({ artStep: n }),
+              style: 'padding: 18px 22px; border-radius: 16px; cursor: pointer; outline: none; transition: background 0.3s ease; background: ' + (n === cur3 ? '#f4f4f4' : 'transparent') + ';',
+              numStyle: 'color: ' + (n === cur3 ? '#000000' : '#969696') + ';',
+              pStyle: 'margin: 8px 0 0; font-size: 14px; font-weight: 500; line-height: 1.4; transition: color 0.3s ease; color: ' + (n === cur3 ? '#000000' : '#969696') + ';' })),
+            shots: it.steps.map((x, n) => ({ src: '/_blob/' + x[2], label: x[3], style: 'position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.5s ease, transform 0.6s ease; opacity: ' + (n === cur3 ? 1 : 0) + '; transform: scale(' + (n === cur3 ? 1 : 1.03) + ');' })) }; }
+        if (it.k === 'text') return { ...base, outer: 'flex: 0 1 ' + pct(it.w) + '; min-width: 0;', box: 'width: 100%;', textBox: 'display: flex; flex-direction: column; gap: 28px;' + (it.end ? ' align-items: flex-end;' : '') + (it.pad ? ' padding-left: ' + it.pad + 'px;' : ''),
+          parts: it.parts.map((p) => ({ h: p.h || '', t: p.t || '', hasH: !!p.h, hasT: !!p.t, tStyle: 'margin: 0; font-weight: 500; ' + (p.big ? 'font-size: 30px; line-height: 1.4; color: #000000;' : 'font-size: 16px; line-height: 1.4; color: #000000;') + (p.narrow ? ' max-width: ' + p.narrow + 'px;' : '') })) };
+        const outer = 'flex: 0 1 ' + pct(it.w) + '; min-width: 0;'; const box = 'position: relative; width: 100%; aspect-ratio: ' + it.w + ' / ' + it.h + '; border-radius: ' + rad + 'px; overflow: hidden;' + (it.bg ? ' background: ' + it.bg + ';' : (it.k === 'quote' ? ' background: #8fa3a6;' : '')) + (it.inset ? ' display: flex; align-items: center; justify-content: center;' : '');
+        const fit = it.fit || 'cover';
+        let media = 'display: block; width: 100%; height: 100%; object-fit: ' + fit + '; border: 0;';
+        if (it.inset) media = 'display: block; width: ' + (it.inset[0] / it.w * 100).toFixed(2) + '%; height: auto; object-fit: cover;';
+        if (it.k === 'frame' && !it.noCrop) media = 'position: absolute; left: 50%; top: 50%; width: 178%; height: 178%; transform: translate(-50%, -50%); border: 0; pointer-events: none;';
+        if (it.noCrop) media = 'display: block; width: 100%; height: 100%; border: 0;';
+        const ov = it.overlay;
+        return { ...base, outer, box, media, ovSrc: ov ? '/_blob/' + ov[0] : '', ovLabel: ov ? ov[3] : '', ovStyle: ov ? 'position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: ' + (ov[1] / it.w * 100).toFixed(2) + '%; height: auto; border-radius: 12px;' : '',
+          qStyle: 'position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 64%; margin: 0; text-align: center; font-size: 30px; font-weight: 500; line-height: 1.4; color: #ffffff; text-shadow: 0 1px 12px rgba(0,0,0,0.25);' }; }) }));
+    const frImg = (o, inPair) => { const r = AR[o.src] || 1.4;
+      return { label: o.label, src: o.src, hasSrc: !!o.src, noSrc: !o.src, onLoad: setAr(o.src),
+        wrap: inPair ? 'flex: ' + r + ' 1 0; min-width: 0;' : 'width: ' + o.w + '%;',
+        style: 'display: block; width: 100%; height: auto; border-radius: 6px;',
+        phStyle: (inPair ? 'flex: 1 1 0;' : 'width: ' + o.w + '%;') + ' aspect-ratio: 16 / 9; border-radius: 6px; background: #e9e9e9; display: flex; align-items: center; justify-content: center; color: #6b6b6b;' }; };
+    const frBlocks = (FR[cur.id] || []).map((b) => ({ isImg: b.type === 'img', isPair: b.type === 'pair', isQuote: b.type === 'quote', isText: b.type === 'text', isSteps: b.type === 'steps', isVideo: b.type === 'video', isSide: b.type === 'side', sideStyle: 'display: flex; gap: 64px; align-items: center; margin-top: 72px;' + (b.imgRight ? ' flex-direction: row-reverse;' : ''), sideImgCol: 'flex: 0 0 ' + (b.w || 45) + '%; display: flex; flex-direction: column; gap: 12px; min-width: 0;', sideTextCol: 'flex: 1 1 0; display: flex; flex-direction: column; gap: 12px; min-width: 0; max-width: 520px;', vsrc: b.src || '', poster: b.poster || '', vlabel: b.label || '', vLoop: !!b.loop, vControls: b.type === 'video' && !b.loop, vwrap: 'width: ' + (b.w || 100) + '%;',
+      h: b.h || '', t: b.t || '', hasT: !!b.t, card: b.card || '', hasCard: !!b.card,
+      imgs: (b.imgs || []).map((o) => frImg(b.type === 'side' ? { ...o, w: 100 } : o, b.type === 'pair')),
+      steps: (b.steps || []).map(([h2, t2]) => ({ h: h2, t: t2 })),
+      boxStyle: 'display: flex; margin-top: 48px; justify-content: ' + (b.align === 'right' ? 'flex-end' : ((b.imgs && b.imgs[0] && b.imgs[0].w < 100) || (b.w && b.w < 100) ? 'center' : 'flex-start')) + ';',
+      textStyle: 'display: flex; flex-direction: column; gap: 12px; margin-top: 72px; max-width: 620px;' + (b.align === 'right' ? ' margin-left: auto;' : '') }));
+    const frMeta = cur.meta.map(([k, v]) => ({ k, v: v.split(/,\s*/).join('\n') }));
+    const EXPF = [['UX Design Intern', 'ChefMe', 'Apr. 2023'], ['Digital Design Intern', 'Plateau Agency', 'Autumn 2021'], ['Graphic Design & Teaching Assistant', 'Art School Horsens', 'Spring 2019']];
+    const EDUF = [['MSc in Digital Design and Interactive Technologies', 'IT University of Copenhagen', '2024–2026'], ['Courses at the MSc in Service Systems Design', 'Aalborg University Copenhagen', '2023–2024'], ['BA in Communication Design', 'Design School Kolding', '2019–2022'], ['Exchange at Kwame Nkrumah University, Ghana', '', '2020'], ['Graphic Design Course', 'Krabbesholm Højskole', 'Autumn 2018']];
+    const COV = { aeldre: ['23b3898be5bde374c694b71aaf6989a1', '#b5dafb', 'A co-design thesis project exploring how a new digital member universe can meet members transitioning into retirement.'],
+      opiaid: ['d60ba129b4f2eb64863aef01fcb50748', '#6bb5b3', 'A web-based interface for AI-driven morphine dosage prediction in post-operative patient care.'],
+      onske: ['70202837d9dbe2c02c94ce2bb40ade95', '#cfe5fb', 'A critical redesign of Ønskeskyen, Denmark’s leading wishlist platform. Rebalancing a transactional gifting model toward relational dimensions of gift-giving.'] };
+    const on = (p) => h === p.id;
+    const ev = (p) => ({ open: go.open(p.id), enter: () => this.setState({ hovered: p.id }), leave: () => this.setState({ hovered: null }) });
+    const idx = P.indexOf(cur); const prvP = P[(idx - 1 + P.length) % P.length];
+    const thumb = (p) => 'width: 96px; height: 72px; flex-shrink: 0; border-radius: 6px; overflow: hidden; background: ' + p.bg + '; padding: 6px; box-sizing: border-box; display: block;';
+    return { ...common,
+      exp: EXPF.map(([a, b2, c]) => ({ a, b: b2, c })), edu: EDUF.map(([a, b2, c]) => ({ a, b: b2, c })),
+      landing: S.view !== 'project',
+      funEnter: () => this.setState({ funHover: true }), funLeave: () => this.setState({ funHover: false }),
+      funAlt: 'position: absolute; inset: 0; width: 100%; height: 100%; display: block; transition: opacity 0.4s ease; opacity: ' + (S.funHover ? '1' : '0') + ';',
+      goProjects: scrollTo('projects'), goAboutSec: scrollTo('about'), goContact: scrollTo('contact'), goVisual: scrollTo('visual'),
+      posLabel: String(idx + 1) + ' / ' + P.length,
+      caseTitle: fig ? fig.title : cur.title, showMeta: true, blocks, isFigmaPage: !!fig, isFramerPage: !fig, frBlocks, frRows, frMeta, frIntro: FR_INTRO[cur.id] || cur.intro,
+      prv: { ...prvP, go: go.open(prvP.id), thumb: thumb(prvP), title: prvP.title }, nxt: { ...common.nxt, thumb: thumb(common.nxt), title: common.nxt.title },
+      chips: P.map((p) => ({ short: p.short, go: go.open(p.id), current: p.id === cur.id ? 'page' : 'false',
+        style: 'flex-shrink: 0; min-height: 36px; padding: 0 14px; border-radius: 999px; font-size: 14px; font-weight: 500; white-space: nowrap; ' + (p.id === cur.id ? 'background: #1c2430; color: #ffffff;' : 'background: #f2f2f2; color: #1c2430;') })),
+      ux: P.filter((p) => p.kind === 'ux').map((p) => ({ ...p, ...ev(p), cover: '/_blob/' + COV[p.id][0], blurb: COV[p.id][2],
+        panelStyle: 'position: relative; aspect-ratio: 472 / 513; border-radius: 5px; overflow: hidden; background: ' + COV[p.id][1] + '; transition: transform 0.35s ease, box-shadow 0.35s ease;' + (on(p) ? ' transform: translateY(-6px); box-shadow: 0 18px 40px rgba(28,36,48,0.14);' : ''),
+        coverStyle: 'position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;',
+        pillStyle: 'position: absolute; left: 16px; bottom: 16px; background: #ffffff; color: #1c2430; border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 500; transition: opacity 0.25s ease;' + (on(p) ? ' opacity: 1;' : ' opacity: 0;') })),
+      vis: ['awe', 'art', 'bach', 'camp', 'cyr'].map((id) => P.find((p) => p.id === id)).map((p) => ({ ...p, ...ev(p),
+        hasVid: false, noVid: true, homeVid: 'media/3b32527d029b9e633a030259ab86b504.mp4',
+        homeImg: '/_blob/' + ({ awe: 'a026f770c2b770b98b89e7d218996311', art: 'c299edcd1e152779de6e7240b3102b9d', bach: '5e2fea13fa29266ee1b8fe3c6b0c6ebc', camp: 'e4a658e42056248452467da47e441309', cyr: '9bded0bd888309ca7f97c0889f616386' })[p.id],
+        cardBox: 'position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: 5px; overflow: hidden; background: ' + ({ awe: '#ffffff', art: '#edfaff', bach: '#ffffff', camp: '#fcdeaa', cyr: '#000000' })[p.id] + '; transition: transform 0.35s ease, box-shadow 0.35s ease;' + (on(p) ? ' transform: translateY(-6px); box-shadow: 0 18px 40px rgba(28,36,48,0.14);' : ''),
+        arrowNudge: 'display: inline-block; color: #4a5568; transition: transform 0.3s ease;' + (on(p) ? ' transform: translate(3px, -3px);' : ''),
+        arrowStyle: 'position: absolute; top: 10px; left: 10px; width: 30px; height: 30px; border-radius: 200px; background: #ffffff; display: flex; align-items: center; justify-content: center; transition: opacity 0.3s ease, transform 0.3s ease;' + (on(p) ? ' opacity: 1; transform: none;' : ' opacity: 0; transform: rotate(45deg);'),
+        cardImg: 'position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; ',
+        tagsSlash: p.tags.split(' · ').join(' / '),
+        thumbStyle: 'position: absolute; inset: 0; width: 100%; height: 100%; box-sizing: border-box; padding: 14px; object-fit: contain; transition: transform 0.4s ease;' + (on(p) ? ' transform: scale(1.05);' : ''),
+        overlayStyle: 'position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; padding: 18px; background: rgba(28,36,48,0.82); transition: opacity 0.25s ease;' + (on(p) ? ' opacity: 1;' : ' opacity: 0;') }))
+    };
+  }
+}
+
+window.__dcStart(Component);
+</script>
+</body>
+</html>
